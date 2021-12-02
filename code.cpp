@@ -75,7 +75,7 @@ bool Node::readData()
     // Get file name
     string filename = "";
     cout << "Enter file name: ";
-    getline(cin, filename);
+    cin << filename;
 
     // Open input file
     ifstream din;
