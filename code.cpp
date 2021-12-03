@@ -29,7 +29,6 @@ private:
 };
 
 
-// Constructor method
 Node::Node()
 {
     Date = "";
@@ -41,7 +40,6 @@ Node::Node()
 }
 
 
-// Constructor method with parameters
 Node::Node(string date, string item, string quantity, string unitprice, string amount)
 {
     Date = date;
@@ -53,7 +51,6 @@ Node::Node(string date, string item, string quantity, string unitprice, string a
 }
 
 
-// Copy constructor method
 Node::Node(Node& node)
 {
     Date = node.Date;
@@ -65,7 +62,6 @@ Node::Node(Node& node)
 }
 
 
-// Destructor method
 Node::~Node()
 {
 }
