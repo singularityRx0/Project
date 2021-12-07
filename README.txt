@@ -27,4 +27,4 @@ OUTPUT:
  2021-11-18      |Ikan           |3              |10             |30             |
  2021-11-18      |Ayam           |2              |10             |20             |
  
- Dont know why the last linked list Date is slanted to the left. Maybe a complier bug.
+ Dont know why the last linked list Date is slanted to the left. Maybe a complier bug?
