@@ -1,60 +1,30 @@
 # Project
 
-when data file, data.txt is: 
+changed the project for easier function adding and debugging.
 
-2021-11-18 Ayam 2 10 20
-2021-11-18 Ikan 3 10 30
-2021-11-18 Nasi 5 4 20
-2021-11-19 Ayam 2 10 20
-2021-11-19 Ikan 3 10 30
-2021-11-20 Nasi 5 4 20
-2021-11-20 Ayam 2 10 20
-2021-11-20 Ikan 3 10 30
-2021-11-20 Nasi 5 4 20
-2021-11-20 Ayam 2 10 20
-2021-12-01 Ikan 3 10 30
-2021-12-01 Nasi 5 4 20
+you do not need to readFile.cpp anymore.
 
-the output would be:
+File 01 and 02 are definitions for the linked list.
+File 03 to 07 are the source code.
 
-Date            Item    Quantity        Unitprice       Amount
-2021-12-01    Nasi    5            4                20
-2021-12-01    Ikan    3            10               30
-2021-11-20    Ayam    2            10               20
-2021-11-20    Nasi    5            4                20
-2021-11-20    Ikan    3            10               30
-2021-11-20    Ayam    2            10               20
-2021-11-20    Nasi    5            4                20
-2021-11-19    Ikan    3            10               30
-2021-11-19    Ayam    2            10               20
-2021-11-18    Nasi    5            4                20
-2021-11-18    Ikan    3            10               30
-2021-11-18    Ayam    2            10               20
-Read Success.......
+Please run the code with all the file, remove the numbering in the file when you need to run the programme.
 
-when the data file data.txt is:
-2021-11-18,Ayam,2,10,20
-2021-11-18,Ikan,3,10,30
-2021-11-18,Nasi,5,4,20
-2021-11-19,Ayam,2,10,20
-2021-11-19,Ikan,3,10,30
-2021-11-20,Nasi,5,4,20
-2021-11-20,Ayam,2,10,20
-2021-11-20,Ikan,3,10,30
-2021-11-20,Nasi,5,4,20
-2021-11-20,Ayam,2,10,20
-2021-12-01,Ikan,3,10,30
-2021-12-01,Nasi,5,4,20
-
-the output would be:
-Date            Item    Quantity        Unitprice       Amount
-2021-12-01,Ikan,3,10,30    2021-12-01,Nasi,5,4,20    2021-11-20,Ikan,3,10,30               2021-11-20,Nasi,5,4,20
-    2021-11-20,Ayam,2,10,20
-2021-11-20,Nasi,5,4,20    2021-11-20,Ayam,2,10,20    2021-11-20,Ikan,3,10,30               2021-11-20,Nasi,5,4,20
-    2021-11-20,Ayam,2,10,20
-2021-11-18,Ayam,2,10,20    2021-11-18,Ikan,3,10,30    2021-11-18,Nasi,5,4,20               2021-11-19,Ayam,2,10,20
-    2021-11-19,Ikan,3,10,30
-Read Success.......
-
-
-data output would not be sorted in a rows if there is a coma between data
+OUTPUT:
+==========================================================================================
+        Date            Item    Quantity        Unitprice       Amount
+==========================================================================================
+2021-12-01       |Nasi           |5              |4              |20             |
+ 2021-12-01      |Nasi           |5              |4              |20             |
+ 2021-12-01      |Ikan           |3              |10             |30             |
+ 2021-11-20      |Ayam           |2              |10             |20             |
+ 2021-11-20      |Nasi           |5              |4              |20             |
+ 2021-11-20      |Ikan           |3              |10             |30             |
+ 2021-11-20      |Ayam           |2              |10             |20             |
+ 2021-11-20      |Nasi           |5              |4              |20             |
+ 2021-11-19      |Ikan           |3              |10             |30             |
+ 2021-11-19      |Ayam           |2              |10             |20             |
+ 2021-11-18      |Nasi           |5              |4              |20             |
+ 2021-11-18      |Ikan           |3              |10             |30             |
+ 2021-11-18      |Ayam           |2              |10             |20             |
+ 
+ Dont know why the last linked list Date is slanted to the left. Maybe a complier bug.
