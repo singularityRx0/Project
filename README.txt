@@ -7,7 +7,7 @@ you do not need to readData.cpp anymore.
 File 01 and 02 are definitions for the linked list.
 File 03 to 07 are the source code.
 
-Please run the code with all the file, remove the numbering in the file when you need to run the programme.
+Please run the code with all the file 01 to 07, remove the numbering in the file when you need to run the programme.
 
 OUTPUT:
 ==========================================================================================
