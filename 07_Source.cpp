@@ -96,7 +96,7 @@ void createDataList(ifstream& din, dataListType& dataList)
 	{
 		din >> date >> item >> quantity >> unitprice >> amount;
 		newData.setDataInfo( date, item, quantity, unitprice, amount);
-		dataList.insertFirst(newData);
+		dataList.insertLast(newData);
 	}
 }
 
