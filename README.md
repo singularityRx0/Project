@@ -1,5 +1,15 @@
 # Project
 
+So far into the project
+- [x] Read text file into linked list.
+- [x] File input for linked list info.
+- [x] Linked List as development 
+- [x] Display all the data from the linked list.
+- [ ] Analysis for Daily sales.
+- [ ] Analysis for Monthly sales.
+- [ ] Extra fucntions.  
+- [ ] all tasks are complete :tada:
+
 changed the project for easier function adding and debugging.
 
 you do not need the **readData.cpp** anymore.
