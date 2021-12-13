@@ -71,20 +71,28 @@ int main()
 			break;
 				
 		case 4:
-			cout << "Select one of the following :" <<endl;
-			cout << "(1) Daily Report" << endl;
-			cout << "(2) Monthly Report" << endl;
-			cout << "\nEnter your choice: ";
+			cout << "Report: " << endl;
+			cout << "1: Daily Report " << endl;
+			cout << "2: Monthly Report " << endl;
+			cout << "Enter Choice: ";
 			cin >> choice;
-				
-				switch (choice)
-				{
-				case 1:
-					cout << "\nEnter date: ";
-					cin.ignore();
-					getline(cin, data);
-					break;	
-				}
+			cout << endl;
+
+			switch (choice)
+			{
+			case 1: // Daily
+				cout << "Enter date: ";
+				cin.ignore();
+				getline(cin, data);
+				cout << endl;
+
+				cout << "==========================================================================================" << endl;
+				cout << setw(8) << "Date" << setw(15) << "Item" << setw(20) << "Quantity" << setw(18) << "Unitprice" << setw(15) << "Amount" << endl;
+				cout << "==========================================================================================" << endl;
+				dataList.dailyReport(data);
+				cout << endl;
+				break;
+			}
 
 		default:
 			cout << "Invalid Selection! Please try again." << endl;
