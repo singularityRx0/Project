@@ -23,7 +23,8 @@ int main()
 
 	string filename = "";
 	cout << "Enter file name (Eg : File Name.txt) : ";
-    getline(cin, filename);
+   	getline(cin, filename);
+	system("cls");
 
 	din.open(filename);
 	if (!din)
@@ -91,6 +92,9 @@ int main()
 				cout << "==========================================================================================" << endl;
 				dataList.dailyReport(data);
 				cout << endl;
+				cin.ignore();
+				cin.get();
+				system("cls");
 				break;
 			}
 
