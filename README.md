@@ -13,12 +13,15 @@
 
 ### Logs:
 
-changed the project for easier function adding and debugging.
+1. Changed the project for easier function adding and debugging.
+   - you do not need the `readData.cpp` anymore.
+   - File 01 and 02 are definitions for the linked list.
+   - File 03 to 07 are the source code.
 
-you do not need the `readData.cpp` anymore.
-
-File 01 and 02 are definitions for the linked list.
-File 03 to 07 are the source code.
+2. Added function `dailyReport()` and code to ignore text on the top of `.txt` file
+   - `dailyReport` only output selected date
+   - Now project igonre text on the top of the `.txt` file.
+   - Can now have file header: `Date`, `Item`, `Quantity`, `Unitprice`, `Amount`
 
 Please run the code with all the file 01 to 07, remove the numbering in the file when you need to run the programme.
 
