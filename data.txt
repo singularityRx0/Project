@@ -1,3 +1,4 @@
+Date Item Quantity Unitprice Amount
 2021-11-18 Ayam 2 10 20
 2021-11-18 Ikan 3 10 30
 2021-11-18 Nasi 5 4 20
