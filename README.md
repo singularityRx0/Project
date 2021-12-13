@@ -1,6 +1,6 @@
 # Project
 
-##So far into the project:
+## So far into the project:
 - [x] Read text file into linked list.
 - [x] File input for linked list info.
 - [x] Linked List as development 
@@ -19,7 +19,7 @@ File 03 to 07 are the source code.
 
 Please run the code with all the file 01 to 07, remove the numbering in the file when you need to run the programme.
 
-##OUTPUT:
+## OUTPUT:
 
  |      Date      |      Item     |    Quantity   |    Unitprice  |     Amount    |
  |----------------|---------------|---------------|---------------|---------------|
