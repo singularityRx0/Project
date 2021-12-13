@@ -50,3 +50,22 @@ void dataListType::dataPrintDate() const
 		current = current->link;
 	}
 }
+
+void dataListType::dailyReport(string data)
+{
+	nodeType<dataType>* current
+		
+	current = first;
+	while (current != nullptr)
+	{
+		if (current->info.getDaate() == data)
+		{
+			current->info.printInfo();
+			current = current->link;
+		}
+		else
+		{
+			current = current->link;
+		}
+	}
+}
