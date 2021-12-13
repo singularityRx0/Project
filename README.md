@@ -19,7 +19,7 @@
    - File 03 to 07 are the source code.
 
 2. **(2021-12-13)** Added function `dailyReport()` and code to ignore text on the top of `.txt` file
-   - `dailyReport` only output selected date located in `dataListType.cpp` & `dataListType.h`
+   - `dailyReport()` only output selected date located in `dataListType.cpp` & `dataListType.h`
    - Now project igonre text on the top of the `.txt` file. Located at `source.cpp` in `createDataList`, `din.ignore(numeric_limits<streamsize>::max(), '\n');`
    - Can now have file header: `Date`, `Item`, `Quantity`, `Unitprice`, `Amount`
 
