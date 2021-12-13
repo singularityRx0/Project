@@ -58,7 +58,7 @@ void dataListType::dailyReport(string data)
 	current = first;
 	while (current != nullptr)
 	{
-		if (current->info.getDaate() == data)
+		if (current->info.getDate() == data)
 		{
 			current->info.printInfo();
 			current = current->link;
