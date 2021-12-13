@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <iomanip>
+#include <limits>
 #include "dataType.h"
 #include "dataListType.h"
 
