@@ -8,7 +8,7 @@
 - [ ] Analysis for Daily sales.
 - [ ] Analysis for Monthly sales.
 - [ ] Extra fucntions.  
-- [ ] all tasks are complete :tada:
+- [ ] All tasks are complete :tada:
 
 
 Logs:
