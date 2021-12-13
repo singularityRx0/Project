@@ -41,3 +41,14 @@ Please run the code with all the file 01 to 07, remove the numbering in the file
  |2021-11-18      |Ayam           |2              |10             |20             |
  
  Dont know why the last linked list Date is slanted to the left. Maybe a complier bug?
+ 
+ ## OUTPUT for Daily Report:
+ 
+ If entered data is: 2021-12-01
+ 
+ |      Date      |      Item     |    Quantity   |    Unitprice  |     Amount    |
+ |----------------|---------------|---------------|---------------|---------------|
+ |2021-12-01      |Nasi           |5              |4              |20             |
+ |2021-12-01      |Nasi           |5              |4              |20             |
+ |2021-12-01      |Ikan           |3              |10             |30             |
+ 
