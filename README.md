@@ -18,7 +18,7 @@
    - File 01 and 02 are definitions for the linked list.
    - File 03 to 07 are the source code.
 
-2. (2021-12-12)Added function `dailyReport()` and code to ignore text on the top of `.txt` file
+2. **(2021-12-12)** Added function `dailyReport()` and code to ignore text on the top of `.txt` file
    - `dailyReport` only output selected date
    - Now project igonre text on the top of the `.txt` file.
    - Can now have file header: `Date`, `Item`, `Quantity`, `Unitprice`, `Amount`
