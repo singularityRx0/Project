@@ -10,9 +10,11 @@
 - [ ] Extra fucntions.  
 - [ ] all tasks are complete :tada:
 
+
+Logs:
 changed the project for easier function adding and debugging.
 
-you do not need the **readData.cpp** anymore.
+you do not need the `readData.cpp` anymore.
 
 File 01 and 02 are definitions for the linked list.
 File 03 to 07 are the source code.
