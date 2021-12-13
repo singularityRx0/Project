@@ -16,6 +16,7 @@ int main()
 	int choice;
 	char ch;
 	string date;
+	string data;
 
 	ifstream din;
 
@@ -67,6 +68,22 @@ int main()
 			cout << "==========================================================================================" << endl;
 			dataList.print();
 			break;
+				
+		case 4:
+			cout << "Report: " << endl;
+			cout << "1. Daily Report" << endl;
+			cout << "2. Monthly Report" << endl;
+			cout << "Enter CHoice: " << endl;
+			cin >> choice;
+				
+				switch (choice)
+				{
+				case 1:
+					cout << "Enter date: " << endl;
+					cin.ignore();
+					getline(cin, data);
+					break;	
+				}
 
 		default:
 			cout << "Invalid Selection! Please try again." << endl;
@@ -92,6 +109,9 @@ void createDataList(ifstream& din, dataListType& dataList)
 	int amount;
 	
 	dataType newData;
+	
+	din.ignore(numeric_limits<streamsize>::max(), '\n');
+	
 	while (din)
 	{
 		din >> date >> item >> quantity >> unitprice >> amount;
