@@ -53,7 +53,7 @@ void dataListType::dataPrintDate() const
 
 void dataListType::dailyReport(string data)
 {
-	nodeType<dataType>* current
+	nodeType<dataType>* current;
 		
 	current = first;
 	while (current != nullptr)
