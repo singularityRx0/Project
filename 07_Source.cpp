@@ -1,8 +1,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <iomanip>
 #include <limits>
+#include <iomanip>
 #include "dataType.h"
 #include "dataListType.h"
 
@@ -33,7 +33,7 @@ int main()
 		return 1;
 	}
 	else
-		cout << "\nInput file initializing. . ." << endl;
+		cout << "\n\tInput file initializing. . ." << endl;
 
 	createDataList(din, dataList);
 	din.close();
@@ -71,16 +71,16 @@ int main()
 			break;
 				
 		case 4:
-			cout << "Report: " << endl;
-			cout << "1. Daily Report" << endl;
-			cout << "2. Monthly Report" << endl;
-			cout << "Enter CHoice: " << endl;
+			cout << "Select one of the following :" <<endl;
+			cout << "(1) Daily Report" << endl;
+			cout << "(2) Monthly Report" << endl;
+			cout << "\nEnter your choice: ";
 			cin >> choice;
 				
 				switch (choice)
 				{
 				case 1:
-					cout << "Enter date: " << endl;
+					cout << "\nEnter date: ";
 					cin.ignore();
 					getline(cin, data);
 					break;	
@@ -123,9 +123,10 @@ void createDataList(ifstream& din, dataListType& dataList)
 
 void displayMenu()
 {
-	cout << "\nSelect one of the following:" << endl;
-	cout << "1: To check a particular date." << endl;
-	cout << "2: print only the dates." << endl;
-	cout << "3: Print all the data." << endl;
-	cout << "0: To exit \n" << endl;
+	cout << "\nSelect one of the following :" << endl;
+	cout << "(1) To check a particular date." << endl;
+	cout << "(2) Print only the dates." << endl;
+	cout << "(3) Print all the data." << endl;
+	cout << "(4) Report Analysis." << endl;
+	cout << "(0) Exit \n" << endl;
 }
