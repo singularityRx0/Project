@@ -28,13 +28,16 @@
    - Overloaded `dataType` for use as a boolean. Able to compare `string` data types with other `string` data types. If the comparison is `True` it would give `0` allowing the   code under the `statements` to run. If comparison is `False` it would give `1` stopping for excuting.
    - Function `bool dataSearch(string date) const` in `dataListType` can be kept as a function as it allows user to know if a `date` exist in the `.txt` file.
 
+## Bug Fixes:
+
+1. Fixed dupliacte node in linked list.
+
 Please run the code with all the file 01 to 07, remove the numbering in the file when you need to run the programme.
 
 ## OUTPUT:
 
  |      Date      |      Item     |    Quantity   |    Unitprice  |     Amount    |
  |----------------|---------------|---------------|---------------|---------------|
- |2021-12-01      |Nasi           |5              |4              |20             |
  |2021-12-01      |Nasi           |5              |4              |20             |
  |2021-12-01      |Ikan           |3              |10             |30             |
  |2021-11-20      |Ayam           |2              |10             |20             |
@@ -57,7 +60,6 @@ Please run the code with all the file 01 to 07, remove the numbering in the file
  |      Date      |      Item     |    Quantity   |    Unitprice  |     Amount    |
  |----------------|---------------|---------------|---------------|---------------|
  |2021-12-01      |Nasi           |5              |4              |20             |
- |2021-12-01      |Nasi           |5              |4              |20             |
  |2021-12-01      |Ikan           |3              |10             |30             |
  
  ## OUTPUT for Monthly Report:
@@ -67,14 +69,12 @@ Please run the code with all the file 01 to 07, remove the numbering in the file
  |      Date      |      Item     |    Quantity   |    Unitprice  |     Amount    |
  |----------------|---------------|---------------|---------------|---------------|
  |2021-12-01      |Nasi           |5              |4              |20             |
- |2021-12-01      |Nasi           |5              |4              |20             |
  |2021-12-01      |Ikan           |3              |10             |30             |
  
  But if entered date is: `2021-11-`
  
  |      Date      |      Item     |    Quantity   |    Unitprice  |     Amount    |
  |----------------|---------------|---------------|---------------|---------------|
- |2021-12-01      |Nasi           |5              |4              |20             |
  |2021-12-01      |Nasi           |5              |4              |20             |
  |2021-12-01      |Ikan           |3              |10             |30             |
  |2021-11-20      |Ayam           |2              |10             |20             |
