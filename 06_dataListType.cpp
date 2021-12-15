@@ -72,12 +72,18 @@ void dataListType::dailyReport(string data)
 
 void dataListType::monthlyReport(string data)
 {
+	string s1,s2;
+	
 	nodeType<dataType>* current;
 
 	current = first;
+	
 	while (current != nullptr)
 	{
-		if (current->info.getDate() >= data)
+		s1 = current->info.getDate();
+		s2 = s1.substr(0,7);
+		
+		if (s2 == data)
 		{
 			current->info.printInfo();
 			current = current->link;
