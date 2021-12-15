@@ -152,9 +152,8 @@ void createDataList(ifstream& din, dataListType& dataList)
 	
 	din.ignore(numeric_limits<streamsize>::max(), '\n');
 	
-	while (din)
-	{
-		din >> date >> item >> quantity >> unitprice >> amount;
+	while (din >> date >> item >> quantity >> unitprice >> amount;)
+	{		
 		newData.setDataInfo( date, item, quantity, unitprice, amount);
 		dataList.insertLast(newData);
 	}
