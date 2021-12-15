@@ -48,6 +48,16 @@ bool dataType::operator!=(const dataType& other) const
 	return (Date != other.Date);
 }
 
+bool dataType::operator>=(const dataType& other) const
+{
+	return (Date >= other.Date);
+}
+
+bool dataType::operator<=(const dataType& other) const
+{
+	return (Date <= other.Date);
+}
+
 ostream& operator<< (ostream& osObject, const dataType& data)
 {
 	osObject << data.Date << "\t |" << data.Item << "\t\t |" << data.Quantity << "\t\t |" << data.Unitprice << "\t\t |" << data.Amount << "\t\t |" << endl;
