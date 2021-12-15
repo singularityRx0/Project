@@ -112,7 +112,7 @@ int main()
 					cout << "\n==========================================================================================" << endl;
 					cout << setw(8) << "Date" << setw(15) << "Item" << setw(20) << "Quantity" << setw(18) << "Unitprice" << setw(15) << "Amount" << endl;
 					cout << "==========================================================================================" << endl;
-					dataList.monthReport(data);
+					dataList.monthlyReport(data);
 					cin.ignore();
 					system("cls");
 					break;
