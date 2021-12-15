@@ -115,5 +115,3 @@ Please run the code with all the file 01 to 07, remove the numbering in the file
  |2021-11-18      |Ayam           |2              |10             |20             |
  
  
- It prints the whole table. Might need another layer of comparisn for it to print only month `11`.
- 
