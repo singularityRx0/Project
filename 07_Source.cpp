@@ -96,6 +96,23 @@ int main()
 				cin.get();
 				system("cls");
 				break;
+					
+			case 2: // Monthly
+				cout << "Enter date: ";
+				cin.ignore();
+				getline(cin, data);
+				cout << endl;
+
+				cout << "==========================================================================================" << endl;
+				cout << setw(8) << "Date" << setw(15) << "Item" << setw(20) << "Quantity" << setw(18) << "Unitprice" << setw(15) << "Amount" << endl;
+				cout << "==========================================================================================" << endl;
+				dataList.monthlyReport(data);
+				cout << endl;
+				cout << endl;
+				cin.ignore();
+				cin.get();
+				system("cls");
+				break;
 			}
 
 		default:
