@@ -31,6 +31,8 @@
 ## Bug Fixes:
 
 1. Fixed dupliacte node in linked list.
+2. Compiler does not recognize `first` and `last` in `unorderedLinkedList.cpp`. 2phase Look up.
+3. nullptr does not work on Dev-C++.
 
 Please run the code with all the file 01 to 07, remove the numbering in the file when you need to run the programme.
 
