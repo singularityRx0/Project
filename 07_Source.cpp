@@ -16,15 +16,14 @@ int main()
 	dataListType dataList;
 	int choice;
 	char ch;
-	string date;
-	string data;
+	string date,data;
 
 	ifstream din;
 
 	string filename = "";
 	cout << "Enter file name (Eg : File Name.txt) : ";
-   	getline(cin, filename);
-	system("cls");
+    getline(cin, filename);
+    system("cls");
 
 	din.open(filename);
 	if (!din)
@@ -72,48 +71,43 @@ int main()
 			break;
 				
 		case 4:
-			cout << "Report: " << endl;
-			cout << "1: Daily Report " << endl;
-			cout << "2: Monthly Report " << endl;
-			cout << "Enter Choice: ";
+			cout << "Select one of the following :" <<endl;
+			cout << "(1) Daily Item Sales" << endl;
+			cout << "(2) Monthly Item Sales" << endl;
+			cout << "\nEnter your choice: ";
 			cin >> choice;
-			cout << endl;
-
-			switch (choice)
-			{
-			case 1: // Daily
-				cout << "\nEnter date (yyyy-mm-dd) : ";
-				cin.ignore();
-				getline(cin, data);
-				cout << endl;
-
-				cout << "==========================================================================================" << endl;
-				cout << setw(8) << "Date" << setw(15) << "Item" << setw(20) << "Quantity" << setw(18) << "Unitprice" << setw(15) << "Amount" << endl;
-				cout << "==========================================================================================" << endl;
-				dataList.dailyReport(data);
-				cout << endl;
-				cin.ignore();
-				cin.get();
-				system("cls");
-				break;
+				
+				switch (choice)
+				{
+				case 1: //daily
+					cout << "\nEnter date (yyyy-mm-dd) : ";
+					cin.ignore();
+					getline(cin, data);
+					cout << endl;
 					
-			case 2: // Monthly
-				cout << "Enter date: ";
-				cin.ignore();
-				getline(cin, data);
-				cout << endl;
-
-				cout << "==========================================================================================" << endl;
-				cout << setw(8) << "Date" << setw(15) << "Item" << setw(20) << "Quantity" << setw(18) << "Unitprice" << setw(15) << "Amount" << endl;
-				cout << "==========================================================================================" << endl;
-				dataList.monthlyReport(data);
-				cout << endl;
-				cout << endl;
-				cin.ignore();
-				cin.get();
-				system("cls");
+					cout << "\n==========================================================================================" << endl;
+					cout << setw(8) << "Date" << setw(15) << "Item" << setw(20) << "Quantity" << setw(18) << "Unitprice" << setw(15) << "Amount" << endl;
+					cout << "==========================================================================================" << endl;
+					dataList.dailyReport(data);
+					cin.ignore();
+					system("cls");
+					break;	
+				
+				case 2: //monthly
+					cout << "\nEnter data as yyyy-mm : " ;
+					cin.ignore();
+					getline(cin, data);
+					cout << endl;
+					
+					cout << "\n==========================================================================================" << endl;
+					cout << setw(8) << "Date" << setw(15) << "Item" << setw(20) << "Quantity" << setw(18) << "Unitprice" << setw(15) << "Amount" << endl;
+					cout << "==========================================================================================" << endl;
+					dataList.monthReport(data);
+					cin.ignore();
+					system("cls");
+					break;
+				}
 				break;
-			}
 
 		default:
 			cout << "Invalid Selection! Please try again." << endl;
