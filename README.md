@@ -21,7 +21,7 @@
 2. **(2021-12-13)** Added function `dailyReport()` and code to ignore text on the top of `.txt` file.
    - `dailyReport()` only output selected date. Located in `dataListType.cpp` & `dataListType.h`
    - Now project igonre text on the top of the `.txt` file. Located at `source.cpp` in `createDataList`, `din.ignore(numeric_limits<streamsize>::max(), '\n');`
-   - Can now have file header: `Date`, `Item`, `Quantity`, `Unitprice`, `Amount`
+   - Can now have `.txt` file header: `Date`, `Item`, `Quantity`, `Unitprice`, `Amount`
 
 3. **(2021-12-15)** Added function `monthlyReport()` and overloaded `dataType` for `>=` and `<=` and suggested enter function.
    - Able to generate monthly report for month 12 but any other month would make it print the whole table.
