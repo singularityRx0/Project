@@ -17,6 +17,8 @@ public:
 	void dataPrintDate() const;
 	
 	void dailyReport(string data);
+	
+	void monthlyReport(string data);
 
 private:
 	void searchDataList(string date, bool& found, nodeType<dataType>* &current) const;
