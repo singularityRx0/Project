@@ -63,11 +63,6 @@ void dataListType::dailyReport(string data)
 			current->info.printInfo();
 			current = current->link;
 		}
-		if (current->info.getdata() != data)
-		{
-			cout << "Data not found!" << endl;
-			break;
-		}
 		else
 		{
 			current = current->link;
@@ -92,11 +87,6 @@ void dataListType::monthlyReport(string data)
 		{
 			current->info.printInfo();
 			current = current->link;
-		}
-		if (s2 != data)
-		{
-			cout << "Data not found!" << endl;
-			break;
 		}
 		else
 		{
