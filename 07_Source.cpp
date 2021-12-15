@@ -50,7 +50,7 @@ int main()
 		switch (choice)
 		{
 		case 1:
-			cout << "Enter date : ";
+			cout << "\nEnter date (yyyy-mm-dd) : ";
 			getline(cin, date);
 			cout << endl;
 
