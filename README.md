@@ -90,5 +90,30 @@ Please run the code with all the file 01 to 07, remove the numbering in the file
  |2021-11-18      |Ikan           |3              |10             |30             |
  |2021-11-18      |Ayam           |2              |10             |20             |
  
+ FIXED
+ 
+ Entered data: `2021-12`
+ 
+ |      Date      |      Item     |    Quantity   |    Unitprice  |     Amount    |
+ |----------------|---------------|---------------|---------------|---------------|
+ |2021-12-01      |Nasi           |5              |4              |20             |
+ |2021-12-01      |Ikan           |3              |10             |30             |
+ 
+ Entered data: `2021-11`
+ 
+ |      Date      |      Item     |    Quantity   |    Unitprice  |     Amount    |
+ |----------------|---------------|---------------|---------------|---------------|
+ |2021-11-20      |Ayam           |2              |10             |20             |
+ |2021-11-20      |Nasi           |5              |4              |20             |
+ |2021-11-20      |Ikan           |3              |10             |30             |
+ |2021-11-20      |Ayam           |2              |10             |20             |
+ |2021-11-20      |Nasi           |5              |4              |20             |
+ |2021-11-19      |Ikan           |3              |10             |30             |
+ |2021-11-19      |Ayam           |2              |10             |20             |
+ |2021-11-18      |Nasi           |5              |4              |20             |
+ |2021-11-18      |Ikan           |3              |10             |30             |
+ |2021-11-18      |Ayam           |2              |10             |20             |
+ 
+ 
  It prints the whole table. Might need another layer of comparisn for it to print only month `11`.
  
