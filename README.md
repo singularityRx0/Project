@@ -5,8 +5,8 @@
 - [x] File input for linked list info.
 - [x] Linked List as development 
 - [x] Display all the data from the linked list.
-- [ ] Analysis for Daily sales.
-- [ ] Analysis for Monthly sales.
+- [x] Analysis for Daily sales.
+- [x] Analysis for Monthly sales.
 - [ ] Extra fucntions.  
 - [ ] All tasks are complete :tada:
 
