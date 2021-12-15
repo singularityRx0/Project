@@ -50,7 +50,7 @@ int main()
 		switch (choice)
 		{
 		case 1:
-			cout << "\nEnter date (yyyy-mm-dd) : ";
+			cout << "Enter date (yyyy-mm-dd) : ";
 			getline(cin, date);
 			cout << endl;
 
@@ -82,7 +82,7 @@ int main()
 			switch (choice)
 			{
 			case 1: // Daily
-				cout << "Enter date: ";
+				cout << "\nEnter date (yyyy-mm-dd) : ";
 				cin.ignore();
 				getline(cin, data);
 				cout << endl;
