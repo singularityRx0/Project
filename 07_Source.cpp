@@ -67,12 +67,13 @@ int main()
 		case 3:
 			cout << "File Name: " << filename << endl;
 			cout << endl;
-			cout << "Data List: " << endl;
+			cout << "\t\t\t\t-----Data List-----\n" << endl;
 				
 			cout << "==========================================================================================" << endl;
 			cout << setw(8) << "Date" << setw(15) << "Item" << setw(20) << "Quantity" << setw(18) << "Unitprice" << setw(15) << "Amount" << endl;
 			cout << "==========================================================================================" << endl;
 			dataList.print();
+			cout << "==========================================================================================" << endl;
 			break;
 				
 		case 4:
@@ -88,36 +89,36 @@ int main()
 					cout << "\nEnter date (yyyy-mm-dd) : ";
 					cin.ignore();
 					getline(cin, data);
-					cout << endl;
+					system("cls");	
 						
 					cout << "File Name: " << filename << endl;
 					cout << endl;
-					cout << "Daily Report: " << endl;
+					cout << "\t\t\t\t-----Daily Item Sales-----" << endl;
 					
 					cout << "\n==========================================================================================" << endl;
 					cout << setw(8) << "Date" << setw(15) << "Item" << setw(20) << "Quantity" << setw(18) << "Unitprice" << setw(15) << "Amount" << endl;
 					cout << "==========================================================================================" << endl;
 					dataList.dailyReport(data);
-					cin.ignore();
-					system("cls");
+					cout << "==========================================================================================" << endl;
+					
 					break;	
 				
 				case 2: //monthly
 					cout << "\nEnter date (yyyy-mm) : " ;
 					cin.ignore();
 					getline(cin, data);
-					cout << endl;
+					system("cls");
 						
 					cout << "File Name: " << filename << endl;
 					cout << endl;
-					cout << "Monthly Report: " << endl;
+					cout << "\t\t\t\t-----Monthly Item Sales-----" << endl;
 					
 					cout << "\n==========================================================================================" << endl;
 					cout << setw(8) << "Date" << setw(15) << "Item" << setw(20) << "Quantity" << setw(18) << "Unitprice" << setw(15) << "Amount" << endl;
 					cout << "==========================================================================================" << endl;
 					dataList.monthlyReport(data);
-					cin.ignore();
-					system("cls");
+					cout << "==========================================================================================" << endl;
+					
 					break;
 						
 				default:
