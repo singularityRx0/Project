@@ -69,3 +69,22 @@ void dataListType::dailyReport(string data)
 		}
 	}
 }
+
+void dataListType::monthlyReport(string data)
+{
+	nodeType<dataType>* current;
+
+	current = first;
+	while (current != nullptr)
+	{
+		if (current->info.getDate() >= data)
+		{
+			current->info.printInfo();
+			current = current->link;
+		}
+		else
+		{
+			current = current->link;
+		}
+	}
+}
