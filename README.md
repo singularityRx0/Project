@@ -18,14 +18,15 @@
    - File 01 and 02 are definitions for the linked list.
    - File 03 to 07 are the source code.
 
-2. **(2021-12-13)** Added function `dailyReport()` and code to ignore text on the top of `.txt` file
+2. **(2021-12-13)** Added function `dailyReport()` and code to ignore text on the top of `.txt` file.
    - `dailyReport()` only output selected date. Located in `dataListType.cpp` & `dataListType.h`
    - Now project igonre text on the top of the `.txt` file. Located at `source.cpp` in `createDataList`, `din.ignore(numeric_limits<streamsize>::max(), '\n');`
    - Can now have file header: `Date`, `Item`, `Quantity`, `Unitprice`, `Amount`
 
-3. **(2021-12-15)** Added function `monthlyReport()` and overloaded `dataType` for `>=` and `<=`
+3. **(2021-12-15)** Added function `monthlyReport()` and overloaded `dataType` for `>=` and `<=` and suggested enter function.
    - Able to generate monthly report for month 12 but any other month would make it print the whole table.
    - Overloaded `dataType` for use as a boolean. Able to compare `string` data types.
+   - Function `bool dataSearch(string date) const` in `dataListType` can be kept as an enter function as it allows user to know if a `date` exist in the `.txt` file.
 
 Please run the code with all the file 01 to 07, remove the numbering in the file when you need to run the programme.
 
@@ -51,7 +52,7 @@ Please run the code with all the file 01 to 07, remove the numbering in the file
  
  ## OUTPUT for Daily Report:
  
- If entered data is: 2021-12-01
+ If entered data is: `2021-12-01`
  
  |      Date      |      Item     |    Quantity   |    Unitprice  |     Amount    |
  |----------------|---------------|---------------|---------------|---------------|
@@ -61,7 +62,7 @@ Please run the code with all the file 01 to 07, remove the numbering in the file
  
  ## OUTPUT for Monthly Report:
  
- If entered data is: 2021-12-
+ If entered data is: `2021-12-`
  
  |      Date      |      Item     |    Quantity   |    Unitprice  |     Amount    |
  |----------------|---------------|---------------|---------------|---------------|
@@ -69,7 +70,7 @@ Please run the code with all the file 01 to 07, remove the numbering in the file
  |2021-12-01      |Nasi           |5              |4              |20             |
  |2021-12-01      |Ikan           |3              |10             |30             |
  
- But if entered date is: 2021-11-
+ But if entered date is: `2021-11-`
  
  |      Date      |      Item     |    Quantity   |    Unitprice  |     Amount    |
  |----------------|---------------|---------------|---------------|---------------|
@@ -87,5 +88,5 @@ Please run the code with all the file 01 to 07, remove the numbering in the file
  |2021-11-18      |Ikan           |3              |10             |30             |
  |2021-11-18      |Ayam           |2              |10             |20             |
  
- 
+ It prints the whole table. Might need another layer of comparisn for it to print only month `11`.
  
