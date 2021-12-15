@@ -25,8 +25,8 @@
 
 3. **(2021-12-15)** Added function `monthlyReport()` and overloaded `dataType` for `>=` and `<=` and suggested enter function.
    - Able to generate monthly report for month 12 but any other month would make it print the whole table.
-   - Overloaded `dataType` for use as a boolean. Able to compare `string` data types.
-   - Function `bool dataSearch(string date) const` in `dataListType` can be kept as an enter function as it allows user to know if a `date` exist in the `.txt` file.
+   - Overloaded `dataType` for use as a boolean. Able to compare `string` data types with other `string` data types. If the comparison is `True` it would give `0` allowing the   code under the `statements` to run. If comparison is `False` it would give `1` stopping for excuting.
+   - Function `bool dataSearch(string date) const` in `dataListType` can be kept as a function as it allows user to know if a `date` exist in the `.txt` file.
 
 Please run the code with all the file 01 to 07, remove the numbering in the file when you need to run the programme.
 
