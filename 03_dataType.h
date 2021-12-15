@@ -25,6 +25,8 @@ public:
 
 	bool operator==(const dataType&) const;
 	bool operator!=(const dataType&) const;
+	bool operator>=(const dataType&) const;
+	bool operator<=(const dataType&) const;
 
 private:
 	string Date;
