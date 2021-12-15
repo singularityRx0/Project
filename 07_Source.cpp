@@ -15,7 +15,6 @@ int main()
 {
 	dataListType dataList;
 	int choice;
-	char ch;
 	string date,data;
 
 	ifstream din;
@@ -41,7 +40,6 @@ int main()
 	displayMenu();
 	cout << "Enter your choice: ";
 	cin >> choice;
-	cin.get(ch);
 	cout << endl;
 
 	while (choice != 0)
@@ -133,7 +131,6 @@ int main()
 		displayMenu();
 		cout << "Enter your choice: ";
 		cin >> choice;
-		cin.get(ch);
 		cout << endl;
 	}
 
