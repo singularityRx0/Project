@@ -41,6 +41,7 @@ int main()
 	cout << "Enter your choice: ";
 	cin >> choice;
 	cout << endl;
+	system("cls");
 
 	while (choice != 0)
 	{
@@ -48,8 +49,10 @@ int main()
 		{
 		case 1:
 			cout << "Enter date (yyyy-mm-dd) : ";
+			cin.ignore();
 			getline(cin, date);
 			cout << endl;
+			cout << "Looking for: " << date << " in " << filename << endl;
 
 			if (dataList.dateSearch(date))
 				cout << "Data Exist: " << date << endl;
