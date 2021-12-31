@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <sstream>
 #include <string>
 #include <limits>
 #include <iomanip>
@@ -141,7 +142,7 @@ int main()
 	return 0;
 }
 
-void createDataList(ifstream& din, dataListType& dataList)
+/*void createDataList(ifstream& din, dataListType& dataList)
 {
 	string date;
 	string item;
@@ -158,6 +159,35 @@ void createDataList(ifstream& din, dataListType& dataList)
 		newData.setDataInfo( date, item, quantity, unitprice, amount);
 		dataList.insertLast(newData);
 	}
+}*/
+
+void createDataList(ifstream& din, dataListType& dataList)
+{
+	string date;
+	string item;
+	string quantity;
+	string unitprice;
+	string amount;
+	
+	string line;
+	
+	dataType newData;
+	
+	din.ignore(numeric_limits<streamsize>::max(), '\n');
+	
+	while (getline(din, line))
+	{
+		stringstream ss(line);
+		getline(ss, date, ',');
+		getline(ss, item, ',');
+		getline(ss, quantity, ',');
+		getline(ss, unitprice, ',');
+		getline(ss, amount, ',');
+		newData.SetDataInfo(date, item, quantity, unitprice, amount);
+		dataList.insertFirst(newData);
+			
+	}
+	
 }
 
 void displayMenu()
