@@ -11,7 +11,7 @@ class dataType
 	friend ostream& operator<< (ostream&, const dataType&);
 
 public:
-	void setDataInfo(string date, string item, int quantity, int unitprice, int amount);
+	void setDataInfo(string date, string item, string quantity, string unitprice, string amount);
 
 	void printDate() const;
 
@@ -21,7 +21,7 @@ public:
 
 	string getDate() const;
 
-	dataType(string date = "", string item = "", int quantity = 0, int unitprice = 0, int amount = 0);
+	dataType(string date = "", string item = "", string quantity = "", string unitprice = "", string amount = "");
 
 	bool operator==(const dataType&) const;
 	bool operator!=(const dataType&) const;
@@ -33,11 +33,11 @@ private:
 
 	string Item;
 
-	int Quantity;
+	string Quantity;
 
-	int Unitprice;
+	string Unitprice;
 
-	int Amount;
+	string Amount;
 
 
 
