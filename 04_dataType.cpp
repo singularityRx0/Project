@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void dataType::setDataInfo(string date, string item, int quantity, int unitprice, int amount)
+void dataType::setDataInfo(string date, string item, string quantity, string unitprice, string amount)
 {
 	Date = date;
 	Item = item;
@@ -33,7 +33,7 @@ string dataType::getDate() const
 	return Date;
 }
 
-dataType::dataType(string date, string item, int quantity, int unitprice, int amount)
+dataType::dataType(string date, string item, string quantity, string unitprice, string amount)
 {
 	setDataInfo(date, item, quantity, unitprice, amount);
 }
