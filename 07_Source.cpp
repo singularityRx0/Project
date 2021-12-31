@@ -154,7 +154,7 @@ int main()
 	
 	din.ignore(numeric_limits<streamsize>::max(), '\n');
 	
-	while (din >> date >> item >> quantity >> unitprice >> amount;)
+	while (din >> date >> item >> quantity >> unitprice >> amount)
 	{		
 		newData.setDataInfo( date, item, quantity, unitprice, amount);
 		dataList.insertLast(newData);
