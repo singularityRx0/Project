@@ -183,8 +183,8 @@ void createDataList(ifstream& din, dataListType& dataList)
 		getline(ss, quantity, ',');
 		getline(ss, unitprice, ',');
 		getline(ss, amount, ',');
-		newData.SetDataInfo(date, item, quantity, unitprice, amount);
-		dataList.insertFirst(newData);
+		newData.setDataInfo(date, item, quantity, unitprice, amount);
+		dataList.insertLast(newData);
 			
 	}
 	
