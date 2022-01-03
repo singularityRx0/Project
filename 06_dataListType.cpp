@@ -136,7 +136,7 @@ void dataListType::totalMonthlyAmount(string data)
 	int totalAmount=0;
 	
 	current = first;
-	while (first != nullptr)
+	while (current != nullptr)
 	{
 		s1 = current->info.getDate();
 		s2= s1.substr(0,7);
