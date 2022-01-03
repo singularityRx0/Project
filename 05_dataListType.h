@@ -19,6 +19,10 @@ public:
 	void dailyReport(string data);
 	
 	void monthlyReport(string data);
+	
+	void totalDailyAmount(string data);
+	
+	void totalMonthlyAmount(string data);
 
 private:
 	void searchDataList(string date, bool& found, nodeType<dataType>* &current) const;
