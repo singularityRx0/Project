@@ -99,13 +99,12 @@ void dataListType::totalDailyAmount(string data)
 {
 	nodeType<dataType>* current;
 	
-	current = first;
-	
 	string s1;
 	
 	int amount=0;
 	int totalamount=0;
 	
+	current = first;
 	while (current != nullptr)
 	{
 		if (current->info.getDate() == data)
@@ -129,7 +128,6 @@ void dataListType::totalMonthlyAmount(string data)
 {
 	nodeType<dataType>* current;
 	
-	
 	string s1;
 	string s2;
 	string s3;
@@ -138,7 +136,6 @@ void dataListType::totalMonthlyAmount(string data)
 	int totalAmount=0;
 	
 	current = first;
-	
 	while (first != nullptr)
 	{
 		s1 = current->info.getDate();
