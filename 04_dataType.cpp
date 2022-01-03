@@ -36,7 +36,7 @@ string dataType::getDate() const
 string dataType::getAmount() const
 {
 	return Amount;
-{
+}
 
 dataType::dataType(string date, string item, string quantity, string unitprice, string amount)
 {
