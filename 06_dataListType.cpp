@@ -120,8 +120,7 @@ void dataListType::totalDailyAmount(string data)
 		}
 	}
 	
-	cout << "Total amount made on " << data << endl;
-	cout << "Total: " << totalamount << endl;
+	cout << "\t\t\t\t\t\tTotal amount made on " << data << " is RM " << totalamount << endl;
 }
 
 void dataListType::totalMonthlyAmount(string data)
@@ -152,25 +151,56 @@ void dataListType::totalMonthlyAmount(string data)
 			current = current->link;
 		}
 	}
-	cout << "Total amount made on " << data << endl;
-	cout << "Total: " << totalAmount << endl;
+	cout << "\t\t\t\t\t\tTotal amount made on " << data << " is RM " << totalamount << endl;
 }
 
+void dataListType::totalMonthlyAmount(string data)
+{
+	string s1,s2,s3;
+	int Amount=0, totalAmount=0;
+	
+	nodeType<dataType>* current;
+	
+	current = first;
+	
+	while (current != nullptr)
+	{
+		s1 = current->info.getDate();
+		s2= s1.substr(0,7);
+		
+		if(s2 == data)
+		{
+			s3 = current->info.getAmount();
+			Amount = stoi(s3); // string to int
+			totalAmount = Amount + totalAmount;
+			current = current->link;
+		}
+		else
+		{
+			current = current->link;
+		}
+	}
+	cout << "\t\t\t\t\t\tTotal amount made on " << data << " is RM " << totalAmount << endl;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+void dataListType::totalAll()
+{
+	string s1,s2,s3;
+	int Amount=0, totalAmount=0;
+	
+	nodeType<dataType>* current;
+	
+	current = first;
+	
+	while (current != nullptr)
+	{
+		s1 = current->info.getDate();
+		s2 = s1.substr(0,7);
+		s3 = current->info.getAmount();
+			
+		Amount = stoi(s3); // string to int
+		totalAmount = Amount + totalAmount;
+		current = current->link;
+	}
+	cout << "\t\t\t\t\t\t\tAll in total amount made is RM " << totalAmount << endl;
+}
