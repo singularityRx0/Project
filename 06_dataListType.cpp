@@ -129,7 +129,6 @@ void dataListType::totalMonthlyAmount(string data)
 {
 	nodeType<dataType>* current;
 	
-	current = first;
 	
 	string s1;
 	string s2;
