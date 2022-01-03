@@ -33,6 +33,11 @@ string dataType::getDate() const
 	return Date;
 }
 
+string dataType::getAmount() cosnt
+{
+	return Amount;
+{
+
 dataType::dataType(string date, string item, string quantity, string unitprice, string amount)
 {
 	setDataInfo(date, item, quantity, unitprice, amount);
