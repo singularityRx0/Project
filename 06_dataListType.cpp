@@ -94,3 +94,87 @@ void dataListType::monthlyReport(string data)
 		}
 	}
 }
+
+void dataListType::totalDailyAmount(string data)
+{
+	nodeType<dataType>* current;
+	
+	current = first;
+	
+	string s1;
+	
+	int amount=0;
+	int totalamount=0;
+	
+	while (current != nullptr)
+	{
+		if (current->info.getDate() == data)
+		{
+			s1 = current->info.getAmount();
+			amount = stoi(s1);
+			totalamount = amount + totalamount;
+			current = current->link;
+		}
+		else
+		{
+			current = current->link;
+		}
+	}
+	
+	cout << "Total amount made on " << data << endl;
+	cout << "Total: " << totalamount << endl;
+}
+
+void dataListType::totalMonthlyAmount(string data)
+{
+	nodeType<dataType>* current;
+	
+	current = first;
+	
+	string s1;
+	string s2;
+	string s3;
+	
+	int Amount=0;
+	int totalAmount=0;
+	
+	current = first;
+	
+	while (first != nullptr)
+	{
+		s1 = current->info.getDate();
+		s2= s1.substr(0,7);
+		if(s2 == data)
+		{
+			s3 = current->info.getAmount();
+			Amount = stoi(s3);
+			totalAmount = Amount + totalAmount;
+			current = current->link;
+		}
+		else
+		{
+			current = current->link;
+		}
+	}
+	cout << "Total amount made on " << data << endl;
+	cout << "Total: " << totalAmount << endl;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
