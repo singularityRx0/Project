@@ -58,11 +58,15 @@ int main()
 			if (dataList.dateSearch(date))
 			{
 				cout << "Data Exist: " << date << endl;
+				cin.ignore();
+				cin.get();
 				system("cls");
 			}
 			else
 			{
 				cout << "The Data Does Not Exist : " << date << endl;
+				cin.ignore();
+				cin.get();
 				system("cls");
 			}
 			break;
@@ -77,6 +81,8 @@ int main()
 			cout << "==========================================================================================" << endl;
 			dataList.print();
 			cout << "==========================================================================================" << endl;
+			cin.ignore();
+			cin.get();
 			system("cls");
 			break;
 				
@@ -104,6 +110,8 @@ int main()
 					cout << "==========================================================================================" << endl;
 					dataList.dailyReport(data);
 					cout << "==========================================================================================" << endl;
+					cin.ignore();
+					cin.get();
 					system("cls");	
 					break;	
 				
@@ -122,6 +130,8 @@ int main()
 					cout << "==========================================================================================" << endl;
 					dataList.monthlyReport(data);
 					cout << "==========================================================================================" << endl;
+					cin.ignore();
+					cin.get();
 					system("cls");
 					break;
 						
