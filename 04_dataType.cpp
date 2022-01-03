@@ -33,7 +33,7 @@ string dataType::getDate() const
 	return Date;
 }
 
-string dataType::getAmount() cosnt
+string dataType::getAmount() const
 {
 	return Amount;
 {
