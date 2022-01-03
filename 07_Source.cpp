@@ -56,16 +56,18 @@ int main()
 			cout << "Looking for: " << date << " in " << filename << endl;
 
 			if (dataList.dateSearch(date))
+			{
 				cout << "Data Exist: " << date << endl;
+				system("cls");
+			}
 			else
+			{
 				cout << "The Data Does Not Exist : " << date << endl;
-			break;
-
-		case 2:
-			dataList.dataPrintDate();
+				system("cls");
+			}
 			break;
 			
-		case 3:
+		case 2:
 			cout << "File Name: " << filename << endl;
 			cout << endl;
 			cout << "\t\t\t\t-----Data List-----\n" << endl;
@@ -75,9 +77,10 @@ int main()
 			cout << "==========================================================================================" << endl;
 			dataList.print();
 			cout << "==========================================================================================" << endl;
+			system("cls");
 			break;
 				
-		case 4:
+		case 3:
 			cout << "Select one of the following :" <<endl;
 			cout << "(1) Daily Item Sales" << endl;
 			cout << "(2) Monthly Item Sales" << endl;
@@ -101,7 +104,7 @@ int main()
 					cout << "==========================================================================================" << endl;
 					dataList.dailyReport(data);
 					cout << "==========================================================================================" << endl;
-					
+					system("cls");	
 					break;	
 				
 				case 2: //monthly
@@ -119,7 +122,7 @@ int main()
 					cout << "==========================================================================================" << endl;
 					dataList.monthlyReport(data);
 					cout << "==========================================================================================" << endl;
-					
+					system("cls");
 					break;
 						
 				default:
@@ -137,6 +140,7 @@ int main()
 		cout << "Enter your choice: ";
 		cin >> choice;
 		cout << endl;
+		system("cls");
 	}
 
 	return 0;
@@ -161,7 +165,7 @@ int main()
 	}
 }*/
 
-void createDataList(ifstream& din, dataListType& dataList)
+void createDataList(ifstream& din, dataListType& dataList) //ignores commas
 {
 	string date;
 	string item;
@@ -194,8 +198,7 @@ void displayMenu()
 {
 	cout << "\nSelect one of the following :" << endl;
 	cout << "(1) To check a particular date." << endl;
-	cout << "(2) Print only the dates." << endl;
-	cout << "(3) Print all the data." << endl;
-	cout << "(4) Report Analysis." << endl;
+	cout << "(2) Print all the data." << endl;
+	cout << "(3) Report Analysis." << endl;
 	cout << "(0) Exit \n" << endl;
 }
