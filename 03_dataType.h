@@ -20,6 +20,8 @@ public:
 	bool checkDate(string date);
 
 	string getDate() const;
+	
+	string getAmount() const;
 
 	dataType(string date = "", string item = "", string quantity = "", string unitprice = "", string amount = "");
 
