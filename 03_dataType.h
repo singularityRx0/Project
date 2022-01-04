@@ -22,6 +22,12 @@ public:
 	string getDate() const;
 	
 	string getAmount() const;
+	
+	string getItem() const;
+	
+	string getQuantity() const;
+
+	string getUnitprice() const;
 
 	dataType(string date = "", string item = "", string quantity = "", string unitprice = "", string amount = "");
 
@@ -29,6 +35,8 @@ public:
 	bool operator!=(const dataType&) const;
 	bool operator>=(const dataType&) const;
 	bool operator<=(const dataType&) const;
+	
+	bool operator==(const dataType&);
 
 private:
 	string Date;
