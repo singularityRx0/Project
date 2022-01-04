@@ -72,9 +72,9 @@ void dataListType::dailyReport(string data)
 
 void dataListType::monthlyReport(string data)
 {
-	string s1,s2;
-	
 	nodeType<dataType>* current;
+	
+	string s1,s2;
 
 	current = first;
 	
@@ -156,10 +156,10 @@ void dataListType::totalMonthlyAmount(string data)
 
 void dataListType::totalAll()
 {
+	nodeType<dataType>* current;
+	
 	string s3;
 	int Amount=0, totalAmount=0;
-	
-	nodeType<dataType>* current;
 	
 	current = first;
 	
@@ -230,6 +230,8 @@ void dataListType::dailySalesInfo(string data)
 
 void dataListType::monthlySalesInfo(string data)
 {
+	nodeType<dataType>* current;
+	
 	string str1, str2;
 
 	string s1, s2, s3;
@@ -241,8 +243,6 @@ void dataListType::monthlySalesInfo(string data)
 	int ayamT = 0;
 	int ikanT = 0;
 	int nasiT = 0;
-
-	nodeType<dataType>* current;
 
 	current = first;
 	while (current != nullptr)
