@@ -160,13 +160,8 @@ void dataListType::dailySalesInfo(string data)
 
 	string s1,s2,s3;
 
-	int ayam = 0;
-	int ikan = 0;
-	int nasi = 0;
-
-	int ayamT = 0;
-	int ikanT = 0;
-	int nasiT = 0;
+	int ayam = 0, ikan = 0, nasi = 0;
+	int ayamT = 0, ikanT = 0, nasiT = 0;
 
 	current = first;
 	while (current != nullptr)
@@ -216,13 +211,8 @@ void dataListType::monthlySalesInfo(string data)
 
 	string s1, s2, s3;
 
-	int ayam = 0;
-	int ikan = 0;
-	int nasi = 0;
-
-	int ayamT = 0;
-	int ikanT = 0;
-	int nasiT = 0;
+	int ayam = 0, ikan = 0, nasi = 0;
+	int ayamT = 0, ikanT = 0, nasiT = 0;
 
 	current = first;
 	while (current != nullptr)
