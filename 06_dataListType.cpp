@@ -280,8 +280,6 @@ void dataListType::monthlySalesInfo(string data)
 			current=current->link;
 		}
 	}
-	cout << data << endl;
-	cout << str2 << endl;
 	cout << "==========================================================================================" << endl;
 	cout << "\t\t\t\t\t\t\-----Number of Item Sold-----" << endl;
 	cout << "\t\t\t\t\t\t\(1) Ayam: " << ayamT << endl;
