@@ -82,6 +82,7 @@ int main()
 			dataList.print();
 			cout << "==========================================================================================" << endl;
 			dataList.totalAll();
+			dataList.infoAll();
 			cin.ignore();
 			cin.get();
 			system("cls");
@@ -112,6 +113,7 @@ int main()
 					dataList.dailyReport(data);
 					cout << "==========================================================================================" << endl;
 					dataList.totalDailyAmount(data);
+					dataList.dailySalesinfo(data);
 					cin.ignore();
 					cin.get();
 					system("cls");	
@@ -133,6 +135,7 @@ int main()
 					dataList.monthlyReport(data);
 					cout << "==========================================================================================" << endl;
 					dataList.totalMonthlyAmount(data);
+					dataList.monthlySalesInfo(data);
 					cin.ignore();
 					cin.get();
 					system("cls");
