@@ -154,26 +154,6 @@ void dataListType::totalMonthlyAmount(string data)
 	cout << "\t\t\t\t\t\tTotal amount made on " << data << " is RM " << totalamount << endl;
 }
 
-void dataListType::totalAll()
-{
-	nodeType<dataType>* current;
-	
-	string s3;
-	int Amount=0, totalAmount=0;
-	
-	current = first;
-	
-	while (current != nullptr)
-	{
-		s3 = current->info.getAmount();
-			
-		Amount = stoi(s3); // string to int
-		totalAmount = Amount + totalAmount;
-		current = current->link;
-	}
-	cout << "\t\t\t\t\t\t\tAll in total amount made is RM " << totalAmount << endl;
-}
-
 void dataListType::dailySalesInfo(string data)
 {
 	nodeType<dataType>* current;
@@ -283,4 +263,71 @@ void dataListType::monthlySalesInfo(string data)
 	cout << "\t\t\t\t\t\t\(1) Ayam: " << ayamT << endl;
 	cout << "\t\t\t\t\t\t\(2) Ikan: " << ikanT << endl;
 	cout << "\t\t\t\t\t\t\(3) Nasi: " << nasiT << endl;
+}
+
+void dataListType::totalAll()
+{
+	nodeType<dataType>* current;
+	
+	string s3;
+	int Amount=0, totalAmount=0;
+	
+	current = first;
+	
+	while (current != nullptr)
+	{
+		s3 = current->info.getAmount();
+			
+		Amount = stoi(s3); // string to int
+		totalAmount = Amount + totalAmount;
+		current = current->link;
+	}
+	cout << "\t\t\t\t\t\t\tAll in total amount made is RM " << totalAmount << endl;
+}
+
+void dataListType::infoAll()
+{
+	nodeType<dataType>* current;
+
+	string s1, s2, s3;
+
+	int ayam = 0, ikan = 0, nasi = 0;
+	int ayamT = 0, ikanT = 0, nasiT = 0;
+
+	current = first;
+
+	while (current != nullptr)
+	{
+		current->info.getItem();
+		if (current->info.getItem() == "Ayam")
+		{
+			s1 = current->info.getQuantity();
+			ayam = stoi(s1);
+			ayamT = ayam + ayamT;
+			current = current->link;
+		}
+		if (current->info.getItem() == "Ikan")
+		{
+			s2 = current->info.getQuantity();
+			ikan = stoi(s2);
+			ikanT = ikan + ikanT;
+			current = current->link;
+		}
+		if (current->info.getItem() == "Nasi")
+		{
+			s3 = current->info.getQuantity();
+			nasi = stoi(s3);
+			nasiT = nasi + nasiT;
+			current = current->link;
+		}
+		else
+		{
+			current = current->link;
+		}
+	}
+	cout << "==========================================================================================" << endl;
+	cout << "-----Total Number of Item Sold-----" << endl;
+	cout << "(1) Ayam: " << ayamT << endl;
+	cout << "(2) Ikan: " << ikanT << endl;
+	cout << "(3) Nasi: " << nasiT << endl;
 }
