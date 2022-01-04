@@ -156,7 +156,7 @@ void dataListType::totalMonthlyAmount(string data)
 
 void dataListType::totalAll()
 {
-	string s1,s2,s3;
+	string s3;
 	int Amount=0, totalAmount=0;
 	
 	nodeType<dataType>* current;
@@ -165,8 +165,6 @@ void dataListType::totalAll()
 	
 	while (current != nullptr)
 	{
-		s1 = current->info.getDate();
-		s2 = s1.substr(0,7);
 		s3 = current->info.getAmount();
 			
 		Amount = stoi(s3); // string to int
