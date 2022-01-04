@@ -66,6 +66,7 @@ int main()
 				dataList.dailyReport(data);
 				cout << "==========================================================================================" << endl;
 				dataList.totalDailyAmount(data);
+				dataList.dailySalesInfo(data);
 				
 				selectFunc();
 				cin >> c2;
@@ -154,6 +155,7 @@ int main()
 				dataList.monthlyReport(data);
 				cout << "==========================================================================================" << endl;
 				dataList.totalMonthlyAmount(data);
+				dataList.monthlySalesInfo(data);
 				
 				selectFunc();
 				cin >> c2;
