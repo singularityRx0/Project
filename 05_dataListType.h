@@ -24,11 +24,13 @@ public:
 	
 	void totalMonthlyAmount(string data);
 	
-	void totalAll();
-	
 	void dailySalesInfo(string data);
 	
 	void monthlySalesInfo(string data);
+	
+	void totalAll();
+	
+	void infoAll();
 
 private:
 	void searchDataList(string date, bool& found, nodeType<dataType>* &current) const;
