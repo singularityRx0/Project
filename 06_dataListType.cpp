@@ -175,3 +175,112 @@ void dataListType::totalAll()
 	}
 	cout << "\t\t\t\t\t\t\tAll in total amount made is RM " << totalAmount << endl;
 }
+
+void dataListType::dailySalesInfo(string data)
+{
+	nodeType<dataType>* current;
+
+	string s1,s2,s3;
+
+	int ayam = 0;
+	int ikan = 0;
+	int nasi = 0;
+
+	int ayamT = 0;
+	int ikanT = 0;
+	int nasiT = 0;
+
+	current = first;
+	while (current != nullptr)
+	{
+		if (current->info.getDate() == data)
+		{
+			if (current->info.getItem() == "Ayam")
+			{
+				s1 = current->info.getQuantity();
+				ayam = stoi(s1);
+				ayamT = ayamT + ayam;
+				current = current->link;
+			}
+			if (current->info.getItem() == "Ikan")
+			{
+				s2 = current->info.getQuantity();
+				ikan = stoi(s2);
+				ikanT = ikanT + ikan;
+				current = current->link;
+			}
+			if (current->info.getItem() == "Nasi")
+			{
+				s3 = current->info.getQuantity();
+				nasi = stoi(s3);
+				nasiT = nasiT + nasi;
+				current = current->link;
+			}
+		}
+		else
+		{
+			current = current->link;
+		}
+	}
+	
+	cout << "==========================================================================================" << endl;
+	cout << "\t\t\t\t\t\t\-----Number of Item Sold-----" << endl;
+	cout << "\t\t\t\t\t\t\(1) Ayam: " << ayamT << endl;
+	cout << "\t\t\t\t\t\t\(2) Ikan: " << ikanT << endl;
+	cout << "\t\t\t\t\t\t\(3) Nasi: " << nasiT << endl;
+}
+
+void dataListType::monthlySalesInfo(string data)
+{
+	string str1, str2;
+
+	string s1, s2, s3;
+
+	int ayam = 0;
+	int ikan = 0;
+	int nasi = 0;
+
+	int ayamT = 0;
+	int ikanT = 0;
+	int nasiT = 0;
+
+	nodeType<dataType>* current;
+
+	current = first;
+	while (current != nullptr)
+	{
+		str1 = current->info.getDate();
+		str2 = str1.substr(0, 7);
+		if (str2 == data)
+		{
+			if (current->info.getItem() == "Ayam")
+			{
+				s1 = current->info.getQuantity();
+				ayam = stoi(s1);
+				ayamT = ayamT + ayam;
+				current = current->link;
+			}
+			if (current->info.getItem() == "Ikan")
+			{
+				s2 = current->info.getQuantity();
+				ikan = stoi(s2);
+				ikanT = ikanT + ikan;
+				current = current->link;
+			}
+			if (current->info.getItem() == "Nasi")
+			{
+				s3 = current->info.getQuantity();
+				nasi = stoi(s3);
+				nasiT = nasiT + nasi;
+				current = current->link;
+			}
+		}
+	}
+	cout << data << endl;
+	cout << str2 << endl;
+	cout << "==========================================================================================" << endl;
+	cout << "\t\t\t\t\t\t\-----Number of Item Sold-----" << endl;
+	cout << "\t\t\t\t\t\t\(1) Ayam: " << ayamT << endl;
+	cout << "\t\t\t\t\t\t\(2) Ikan: " << ikanT << endl;
+	cout << "\t\t\t\t\t\t\(3) Nasi: " << nasiT << endl;
+}
