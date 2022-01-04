@@ -275,6 +275,10 @@ void dataListType::monthlySalesInfo(string data)
 				current = current->link;
 			}
 		}
+		else
+		{
+			current=current->link;
+		}
 	}
 	cout << data << endl;
 	cout << str2 << endl;
