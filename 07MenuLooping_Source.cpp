@@ -37,6 +37,7 @@ int main()
 		cout << "\n\tInput file initializing. . ." << endl;
 
 	createDataList(din, dataList);
+	din.close();
 	
 	label:
 		
