@@ -110,6 +110,7 @@ int main()
 						dataList.print();
 						cout << "==========================================================================================" << endl;
 						dataList.totalAll();
+						dataList.inofAll();
 	
 						cout << "\nSelect one of the following :  " << endl;
 						cout << "(3) Continue" << endl;
@@ -199,6 +200,7 @@ int main()
 						dataList.print();
 						cout << "==========================================================================================" << endl;
 						dataList.totalAll();
+						dataList.infoAll();
 	
 						cout << "\nSelect one of the following :  " << endl;
 						cout << "(3) Continue" << endl;
