@@ -151,7 +151,7 @@ void dataListType::totalMonthlyAmount(string data)
 			current = current->link;
 		}
 	}
-	cout << "\t\t\t\t\t\tTotal amount made on " << data << " is RM " << totalamount << endl;
+	cout << "\t\t\t\t\t\tTotal amount made on " << data << " is RM " << totalAmount << endl;
 }
 
 void dataListType::dailySalesInfo(string data)
