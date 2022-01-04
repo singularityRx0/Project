@@ -113,7 +113,7 @@ int main()
 					dataList.dailyReport(data);
 					cout << "==========================================================================================" << endl;
 					dataList.totalDailyAmount(data);
-					dataList.dailySalesinfo(data);
+					dataList.dailySalesInfo(data);
 					cin.ignore();
 					cin.get();
 					system("cls");	
