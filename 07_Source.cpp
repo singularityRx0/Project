@@ -77,7 +77,7 @@ int main()
 			cout << "\t\t\t\t-----Data List-----\n" << endl;
 				
 			cout << "==========================================================================================" << endl;
-			cout << setw(8) << "Date" << setw(15) << "Item" << setw(20) << "Quantity" << setw(18) << "Unitprice" << setw(18) << "Amount (RM)" << endl;
+			cout << setw(8) << "Date" << setw(17) << "Item" << setw(19) << "Quantity" << setw(21) << "Unitprice (RM)" << setw(15) << "Amount (RM)" << endl;
 			cout << "==========================================================================================" << endl;
 			dataList.print();
 			cout << "==========================================================================================" << endl;
@@ -108,7 +108,7 @@ int main()
 					cout << "\t\t\t\t-----Daily Item Sales-----" << endl;
 					
 					cout << "\n==========================================================================================" << endl;
-					cout << setw(8) << "Date" << setw(15) << "Item" << setw(20) << "Quantity" << setw(18) << "Unitprice" << setw(18) << "Amount (RM)" << endl;
+					cout << setw(8) << "Date" << setw(17) << "Item" << setw(19) << "Quantity" << setw(21) << "Unitprice (RM)" << setw(15) << "Amount (RM)" << endl;
 					cout << "==========================================================================================" << endl;
 					dataList.dailyReport(data);
 					cout << "==========================================================================================" << endl;
@@ -130,7 +130,7 @@ int main()
 					cout << "\t\t\t\t-----Monthly Item Sales-----" << endl;
 					
 					cout << "\n==========================================================================================" << endl;
-					cout << setw(8) << "Date" << setw(15) << "Item" << setw(20) << "Quantity" << setw(18) << "Unitprice" << setw(18) << "Amount (RM)" << endl;
+					cout << setw(8) << "Date" << setw(17) << "Item" << setw(19) << "Quantity" << setw(21) << "Unitprice (RM)" << setw(15) << "Amount (RM)" << endl;
 					cout << "==========================================================================================" << endl;
 					dataList.monthlyReport(data);
 					cout << "==========================================================================================" << endl;
