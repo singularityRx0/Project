@@ -49,9 +49,9 @@ int main()
 
 	while (choice != 0)
 	{
-		switch (choice) // daily
+		switch (choice) 
 		{
-			case 1:
+			case 1: // daily
 				cout << "\nEnter date (yyyy-mm-dd) : ";
 				cin.ignore();
 				getline(cin, data);
@@ -62,7 +62,7 @@ int main()
 				cout << "\t\t\t\t-----Daily Item Sales-----" << endl;
 					
 				cout << "\n==========================================================================================" << endl;
-				cout << setw(8) << "Date" << setw(15) << "Item" << setw(20) << "Quantity" << setw(18) << "Unitprice" << setw(18) << "Amount (RM)" << endl;
+				cout << setw(8) << "Date" << setw(17) << "Item" << setw(19) << "Quantity" << setw(21) << "Unitprice (RM)" << setw(15) << "Amount (RM)" << endl;
 				cout << "==========================================================================================" << endl;
 				dataList.dailyReport(data);
 				cout << "==========================================================================================" << endl;
@@ -82,7 +82,7 @@ int main()
 						cout << "(9) Return to function menu" << endl;
 						cout << "(10) Return to main menu" << endl;
 						cout << "(0) Exit" << endl;
-						cout << "Enter your choice : " ;
+						cout << "\nEnter your choice : " ;
 						cin >> c2;
 					}
 					
@@ -94,41 +94,18 @@ int main()
 						cout << "(9) Return to function menu" << endl;
 						cout << "(10) Return to main menu" << endl;
 						cout << "(0) Exit" << endl;
-						cout << "Enter your choice : " ;
+						cout << "\nEnter your choice : " ;
 						cin >> c2;
 					}
 					
-					while(c2 == 3) 
-					{
-						cout << "File Name : " << filename << endl;
-						cout << endl;
-						cout << "\t\t\t\t-----Data List-----\n" << endl;
-				
-						cout << "==========================================================================================" << endl;
-						cout << setw(8) << "Date" << setw(15) << "Item" << setw(20) << "Quantity" << setw(18) << "Unitprice" << setw(18) << "Amount (RM)" << endl;
-						cout << "==========================================================================================" << endl;
-						dataList.print();
-						cout << "==========================================================================================" << endl;
-						dataList.totalAll();
-						dataList.inofAll();
-	
-						cout << "\nSelect one of the following :  " << endl;
-						cout << "(3) Continue" << endl;
-						cout << "(9) Return to function menu" << endl;
-						cout << "(10) Return to main menu" << endl;
-						cout << "(0) Exit" << endl;
-						cout << "Enter your choice : " ;
-						cin >> c2;
-					}
-					
-					while(c2 == 9)
+					while(c2 == 9) // return to func
 					{
 						system("cls");
 						selectFunc();
 						cin >> c2;
 					}
 					
-					while(c2 == 10)
+					while(c2 == 10) // return to main
 					{
 						system("cls");
 						goto label;
@@ -152,7 +129,7 @@ int main()
 				cout << "\t\t\t\t-----Monthly Item Sales-----" << endl;
 					
 				cout << "\n==========================================================================================" << endl;
-				cout << setw(8) << "Date" << setw(15) << "Item" << setw(20) << "Quantity" << setw(18) << "Unitprice" << setw(18) << "Amount (RM)" << endl;
+				cout << setw(8) << "Date" << setw(17) << "Item" << setw(19) << "Quantity" << setw(21) << "Unitprice (RM)" << setw(15) << "Amount (RM)" << endl;
 				cout << "==========================================================================================" << endl;
 				dataList.monthlyReport(data);
 				cout << "==========================================================================================" << endl;
@@ -172,7 +149,7 @@ int main()
 						cout << "(9) Return to function menu" << endl;
 						cout << "(10) Return to main menu" << endl;
 						cout << "(0) Exit" << endl;
-						cout << "Enter your choice : " ;
+						cout << "\nEnter your choice : " ;
 						cin >> c2;
 					}
 					
@@ -184,30 +161,69 @@ int main()
 						cout << "(9) Return to function menu" << endl;
 						cout << "(10) Return to main menu" << endl;
 						cout << "(0) Exit" << endl;
-						cout << "Enter your choice : " ;
+						cout << "\nEnter your choice : " ;
 						cin >> c2;
 					}
 					
-					while(c2 == 3) 
+					while(c2 == 9)
 					{
-						cout << "File Name : " << filename << endl;
-						cout << endl;
-						cout << "\t\t\t\t-----Data List-----\n" << endl;
+						system("cls");
+						selectFunc();
+						cin >> c2;
+					}
+					
+					while(c2 == 10)
+					{
+						system("cls");
+						goto label;
+					}
+					
+					while(c2 == 0)
+					{
+						exit (0);
+					}
+				}
+				break;
 				
-						cout << "==========================================================================================" << endl;
-						cout << setw(8) << "Date" << setw(15) << "Item" << setw(20) << "Quantity" << setw(18) << "Unitprice" << setw(18) << "Amount (RM)" << endl;
-						cout << "==========================================================================================" << endl;
-						dataList.print();
-						cout << "==========================================================================================" << endl;
-						dataList.totalAll();
-						dataList.infoAll();
-	
+			case 3: // display
+				cout << "File Name: " << filename << endl;
+				cout << endl;
+				cout << "\t\t\t\t-----Data List-----\n" << endl;
+				
+				cout << "==========================================================================================" << endl;
+				cout << setw(8) << "Date" << setw(17) << "Item" << setw(19) << "Quantity" << setw(21) << "Unitprice (RM)" << setw(15) << "Amount (RM)" << endl;
+				cout << "==========================================================================================" << endl;
+				dataList.print();
+				cout << "==========================================================================================" << endl;
+				dataList.totalAll();
+				dataList.infoAll();
+				
+				selectFunc();
+				cin >> c2;
+				
+				for(;;)
+				{
+					while(c2 == 1) 
+					{
+						// add
 						cout << "\nSelect one of the following :  " << endl;
-						cout << "(3) Continue" << endl;
+						cout << "(1) Continue" << endl;
 						cout << "(9) Return to function menu" << endl;
 						cout << "(10) Return to main menu" << endl;
 						cout << "(0) Exit" << endl;
-						cout << "Enter your choice : " ;
+						cout << "\nEnter your choice : " ;
+						cin >> c2;
+					}
+					
+					while(c2 == 2) 
+					{
+						// del
+						cout << "\nSelect one of the following :  " << endl;
+						cout << "(2) Continue" << endl;
+						cout << "(9) Return to function menu" << endl;
+						cout << "(10) Return to main menu" << endl;
+						cout << "(0) Exit" << endl;
+						cout << "\nEnter your choice : " ;
 						cin >> c2;
 					}
 					
@@ -278,6 +294,7 @@ void displayMenu()
 	cout << "\nSelect one of the following :" << endl;
 	cout << "(1) Daily Item Sales" << endl;
 	cout << "(2) Monthly Item Sales" << endl;
+	cout << "(3) Display All Data" << endl;
 	cout << "(0) Exit \n" << endl;
 }
 
@@ -289,7 +306,6 @@ void selectFunc()
 	cout << "\nSelect one of the following :" << endl;
 	cout << "(1) Add" << endl;
 	cout << "(2) Delete" << endl;
-	cout << "(3) Display all data" << endl;
 	cout << "(10) Return to main menu" << endl;
 	cout << "(0) Exit" << endl;
 	cout << "\nEnter your choice: ";
