@@ -175,14 +175,14 @@ void dataListType::dailySalesInfo(string data)
 				ayamT = ayamT + ayam;
 				current = current->link;
 			}
-			if (current->info.getItem() == "Ikan")
+			else if (current->info.getItem() == "Ikan")
 			{
 				s2 = current->info.getQuantity();
 				ikan = stoi(s2);
 				ikanT = ikanT + ikan;
 				current = current->link;
 			}
-			if (current->info.getItem() == "Nasi")
+			else if (current->info.getItem() == "Nasi")
 			{
 				s3 = current->info.getQuantity();
 				nasi = stoi(s3);
@@ -228,14 +228,14 @@ void dataListType::monthlySalesInfo(string data)
 				ayamT = ayamT + ayam;
 				current = current->link;
 			}
-			if (current->info.getItem() == "Ikan")
+			else if (current->info.getItem() == "Ikan")
 			{
 				s2 = current->info.getQuantity();
 				ikan = stoi(s2);
 				ikanT = ikanT + ikan;
 				current = current->link;
 			}
-			if (current->info.getItem() == "Nasi")
+			else if (current->info.getItem() == "Nasi")
 			{
 				s3 = current->info.getQuantity();
 				nasi = stoi(s3);
