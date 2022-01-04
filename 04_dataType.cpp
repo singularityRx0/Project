@@ -38,6 +38,21 @@ string dataType::getAmount() const
 	return Amount;
 }
 
+string dataType::getItem() const
+{
+	return Item;
+}
+
+string dataType::getQuantity() const
+{
+	return Quantity;
+}
+
+string dataType::getUnitprice() const
+{
+	return Unitprice;
+}
+
 dataType::dataType(string date, string item, string quantity, string unitprice, string amount)
 {
 	setDataInfo(date, item, quantity, unitprice, amount);
