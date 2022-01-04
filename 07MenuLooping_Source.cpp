@@ -66,8 +66,8 @@ int main()
 				cout << "==========================================================================================" << endl;
 				dataList.dailyReport(data);
 				cout << "==========================================================================================" << endl;
-				dataList.totalDailyAmount(data);
 				dataList.dailySalesInfo(data);
+				dataList.totalDailyAmount(data);
 				
 				selectFunc();
 				cin >> c2;
@@ -133,8 +133,8 @@ int main()
 				cout << "==========================================================================================" << endl;
 				dataList.monthlyReport(data);
 				cout << "==========================================================================================" << endl;
-				dataList.totalMonthlyAmount(data);
 				dataList.monthlySalesInfo(data);
+				dataList.totalMonthlyAmount(data);
 				
 				selectFunc();
 				cin >> c2;
@@ -195,8 +195,8 @@ int main()
 				cout << "==========================================================================================" << endl;
 				dataList.print();
 				cout << "==========================================================================================" << endl;
-				dataList.totalAll();
 				dataList.infoAll();
+				dataList.totalAll();
 				
 				selectFunc();
 				cin >> c2;
