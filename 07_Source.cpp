@@ -171,45 +171,45 @@ void addNew(dataListType& dataList, int choice)
 	
 	cout << "(1) Add to top" << endl;
 	cout << "(2) Add to bottom" << endl;
+	cout << "\nEnter your choice: ";
 	cin >> choice;
 	cin.ignore();
 	
 	switch(choice)
 	{
-	case 1:
-		cout << "Enter the date: ";
-        getline(cin,date);
-        //Get the item
-        cout << "Enter the item: ";
-        getline(cin,item);
-        //Get the quantity
-        cout << "Enter the quantity: ";
-        getline(cin,quantity);
-        //Get the unit price
-        cout << "Enter the unit price: ";
-        getline(cin,unitprice);;
-        cout << "Enter the amount: ";
-        getline(cin,amount);
-        newData.setDataInfo(date, item, quantity, unitprice, amount);
-        dataList.insertFirst(newData);
-        break;
-    case 2:
-    	cout << "Enter the date: ";
-        cin >> date;
-        //Get the item
-        cout << "Enter the item: ";
-        cin >> item;
-        //Get the quantity
-        cout << "Enter the quantity: ";
-        cin >> quantity;
-        //Get the unit price
-        cout << "Enter the unit price: ";
-        cin >> unitprice;
-        cout << "Enter the amount: ";
-        getline(cin,amount);
-        newData.setDataInfo(date, item, quantity, unitprice, amount);
-        dataList.insertLast(newData);
-        break;
+		case 1:
+        		cout << "\nEnter the date (yyyy-mm-dd) : ";
+			getline(cin,date);
+			cout << "Enter the item : ";
+			getline(cin,item);
+			cout << "Enter the quantity : ";
+ 			getline(cin,quantity);
+   			cout << "Enter the unit price : ";
+			getline(cin,unitprice);;
+ 			cout << "Enter the amount : ";
+   			getline(cin,amount);
+			newData.setDataInfo(date, item, quantity, unitprice, amount);
+        		dataList.insertFirst(newData);
+       		break;
+       	 
+   		case 2:
+   			cout << "\nEnter the date (yyyy-mm-dd) : ";
+			getline(cin,date);
+			cout << "Enter the item : ";
+			getline(cin,item);
+			cout << "Enter the quantity : ";
+ 			getline(cin,quantity);
+   			cout << "Enter the unit price : ";
+			getline(cin,unitprice);;
+ 			cout << "Enter the amount : ";
+   			getline(cin,amount);
+        		newData.setDataInfo(date, item, quantity, unitprice, amount);
+        		dataList.insertLast(newData);
+       		break;
+        
+       		default:
+			cout << "\nInvalid Selection! Please try again." << endl;
+			break;
 	}
 }
 
