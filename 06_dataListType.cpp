@@ -24,7 +24,7 @@ void dataLsitType::dataCheckList(string data)
 			current = current->link;
 		}
 	}
-	cout << count << " Data Found in List." << endl;
+	cout << count << "Similar Data Found." << endl;
 }
 
 void dataListType::dataPrintDate() const
