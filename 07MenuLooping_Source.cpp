@@ -70,7 +70,7 @@ int main()
 				cout << "==========================================================================================" << endl;
 				dataList.dailySalesInfo(data);
 				dataList.totalDailyAmount(data);
-				cout << "press any ENTER to continue....." << endl;
+				cout << "\t\t\t\t\t\t\tpress any ENTER to continue....." << endl;
 				cin.get();
 				
 				selectFunc();
@@ -84,17 +84,23 @@ int main()
 						cout << "\nSelect one of the following :  " << endl;
 						cout << "(1) Add to bottom" << endl;
 						cout << "(2) Add to top" << endl;
+						cout << "\nEnter your choice : ";
+						cin >> c2;
+						addData(dataList, c2);
+						cout << "\nSelect one of the following :  " << endl;
+						cout << "(1) Continue" << endl;
+						cout << "(9) Return to function menu" << endl;
 						cout << "(10) Return to main menu" << endl;
 						cout << "(0) Exit" << endl;
 						cout << "\nEnter your choice : ";
 						cin >> c2;
-						addData(dataList, c2);
-						system("cls");
 					}
 					
 					while(c2 == 2) 
 					{
 						// del
+						deleteData(dataList, c2);
+						system("cls");
 						cout << "\nSelect one of the following :  " << endl;
 						cout << "(2) Continue" << endl;
 						cout << "(9) Return to function menu" << endl;
@@ -102,18 +108,17 @@ int main()
 						cout << "(0) Exit" << endl;
 						cout << "\nEnter your choice : " ;
 						cin >> c2;
-						deleteData(dataList, c2);
-						system("cls");
+						
 					}
 					
-					while(c2 == 9) // return to func
+					while(c2 == 9)
 					{
 						system("cls");
 						selectFunc();
 						cin >> c2;
 					}
 					
-					while(c2 == 10) // return to main
+					while(c2 == 10)
 					{
 						system("cls");
 						goto label;
@@ -143,7 +148,7 @@ int main()
 				cout << "==========================================================================================" << endl;
 				dataList.monthlySalesInfo(data);
 				dataList.totalMonthlyAmount(data);
-				cout << "press any ENTER to continue....." << endl;
+				cout << "\t\t\t\t\t\t\tpress any ENTER to continue....." << endl;
 				cin.get();
 				
 				selectFunc();
@@ -157,17 +162,23 @@ int main()
 						cout << "\nSelect one of the following :  " << endl;
 						cout << "(1) Add to bottom" << endl;
 						cout << "(2) Add to top" << endl;
+						cout << "\nEnter your choice : ";
+						cin >> c2;
+						addData(dataList, c2);
+						cout << "\nSelect one of the following :  " << endl;
+						cout << "(1) Continue" << endl;
+						cout << "(9) Return to function menu" << endl;
 						cout << "(10) Return to main menu" << endl;
 						cout << "(0) Exit" << endl;
 						cout << "\nEnter your choice : ";
 						cin >> c2;
-						addData(dataList, c2);
-						system("cls");
 					}
 					
 					while(c2 == 2) 
 					{
 						// del
+						deleteData(dataList, c2);
+						system("cls");
 						cout << "\nSelect one of the following :  " << endl;
 						cout << "(2) Continue" << endl;
 						cout << "(9) Return to function menu" << endl;
@@ -175,8 +186,7 @@ int main()
 						cout << "(0) Exit" << endl;
 						cout << "\nEnter your choice : " ;
 						cin >> c2;
-						deleteData(dataList, c2);
-						system("cls");
+						
 					}
 					
 					while(c2 == 9)
@@ -225,17 +235,23 @@ int main()
 						cout << "\nSelect one of the following :  " << endl;
 						cout << "(1) Add to bottom" << endl;
 						cout << "(2) Add to top" << endl;
+						cout << "\nEnter your choice : ";
+						cin >> c2;
+						addData(dataList, c2);
+						cout << "\nSelect one of the following :  " << endl;
+						cout << "(1) Continue" << endl;
+						cout << "(9) Return to function menu" << endl;
 						cout << "(10) Return to main menu" << endl;
 						cout << "(0) Exit" << endl;
 						cout << "\nEnter your choice : ";
 						cin >> c2;
-						addData(dataList, c2);
-						system("cls");
 					}
 					
 					while(c2 == 2) 
 					{
 						// del
+						deleteData(dataList, c2);
+						system("cls");
 						cout << "\nSelect one of the following :  " << endl;
 						cout << "(2) Continue" << endl;
 						cout << "(9) Return to function menu" << endl;
@@ -243,8 +259,7 @@ int main()
 						cout << "(0) Exit" << endl;
 						cout << "\nEnter your choice : " ;
 						cin >> c2;
-						deleteData(dataList, c2);
-						system("cls");
+						
 					}
 					
 					while(c2 == 9)
@@ -294,9 +309,9 @@ int main()
 			case 6: // check
 				cin.ignore();
 				cout << "\nCheck for same data: " << endl;
-				cout << "Enter date: ";
+				cout << "\nEnter date: ";
 				getline(cin,data);
-				cout << "Searching for similar " << data << " in " << filename << endl;
+				cout << "\nSearching for similar " << data << " in " << filename << "..." << endl;
 				dataList.dataCheckList(data);
 				break;
 
@@ -378,7 +393,7 @@ void addData(dataListType& dataList, int c2)
 	{
 	case 1: //add to bottom
 		cout << "\n\t\t Input data into the list." << endl;
-		cout << "Enter date: " ;
+		cout << "\nEnter date: " ;
 		getline(cin, date);
 		cout << endl;
 		cout << "Enter item: ";
@@ -395,11 +410,13 @@ void addData(dataListType& dataList, int c2)
 		cout << endl;
 		newData.setDataInfo(date, item, quantity, unitprice, amount);
 		dataList.insertLast(newData);
+		cout << "\tData successfully added to the list! Press any ENTER to continue....." << endl;
+		cin.ignore();
 		break;
 			
 	case 2: //add to top
 		cout << "\n\t\t Input data to be entered." << endl;
-		cout << "Enter date: ";
+		cout << "\nEnter date: ";
 		getline(cin, date);
 		cout << endl;
 		cout << "Enter item: ";
@@ -416,9 +433,12 @@ void addData(dataListType& dataList, int c2)
 		cout << endl;
 		newData.setDataInfo(date, item, quantity, unitprice, amount);
 		dataList.insertFirst(newData);
+		cout << "\tData successfully added to the list! Press any ENTER to continue....." << endl;
+		cin.ignore();
 		break;
 		
 	default:
+		cout << "\nInvalid Selection! Please try again." << endl;
 		break;
 	}
 }
