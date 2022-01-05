@@ -11,8 +11,6 @@ class dataListType :public unorderedLinkedList<dataType>
 {
 public:
 	void dataCheckList(string data);
-
-	void dataPrintDate() const;
 	
 	void dailyReport(string data);
 	
