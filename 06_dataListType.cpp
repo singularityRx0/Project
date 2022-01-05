@@ -4,13 +4,13 @@
 
 using namespace std;
 
-void dataLsitType::dataCheckList(string data)
+void dataListType::dataCheckList(string data)
 {
 	nodeType<dataType>* current;
 	
 	int count = 0;
 	
-	curent = first;
+	current = first;
 	
 	while(current != nullptr)
 	{
