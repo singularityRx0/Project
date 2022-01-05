@@ -7,8 +7,8 @@
 - [x] Display all the data from the linked list.
 - [x] Analysis for Daily sales.
 - [x] Analysis for Monthly sales.
-- [ ] Extra fucntions.  
-- [ ] All tasks are complete :tada:
+- [x] Extra fucntions.  
+- [x] All tasks are complete :tada:
 
 
 ## Logs:
