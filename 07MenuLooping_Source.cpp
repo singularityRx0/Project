@@ -13,6 +13,7 @@ void createDataList(ifstream& din, dataListType& dataList);
 void displayMenu();
 void selectFunc();
 void addData(dataListType& dataList, int c2);
+void deleteData(dataListType& dataList, int c2);
 
 int main()
 {
@@ -99,6 +100,8 @@ int main()
 						cout << "(0) Exit" << endl;
 						cout << "\nEnter your choice : " ;
 						cin >> c2;
+						deleteData(dataList, c2);
+						system("cls");
 					}
 					
 					while(c2 == 9) // return to func
@@ -168,6 +171,8 @@ int main()
 						cout << "(0) Exit" << endl;
 						cout << "\nEnter your choice : " ;
 						cin >> c2;
+						deleteData(dataList, c2);
+						system("cls");
 					}
 					
 					while(c2 == 9)
@@ -232,6 +237,8 @@ int main()
 						cout << "(0) Exit" << endl;
 						cout << "\nEnter your choice : " ;
 						cin >> c2;
+						deleteData(dataList, c2);
+						system("cls");
 					}
 					
 					while(c2 == 9)
@@ -254,17 +261,29 @@ int main()
 				}
 				break;
 				
-			case 4:
-			// add
-			cout << "\nSelect one of the following :  " << endl;
-			cout << "(1) Add to bottom" << endl;
-			cout << "(2) Add to top" << endl;
-			cout << "(10) Return to main menu" << endl;
-			cout << "(0) Exit" << endl;
-			cout << "\nEnter your choice : ";
-			cin >> c2;
-			addData(dataList, c2);
-			system("cls");
+			case 4: // add
+				cout << "\nSelect one of the following :  " << endl;
+				cout << "(1) Add to bottom" << endl;
+				cout << "(2) Add to top" << endl;
+				cout << "(10) Return to main menu" << endl;
+				cout << "(0) Exit" << endl;
+				cout << "\nEnter your choice : ";
+				cin >> c2;
+				addData(dataList, c2);
+				system("cls");
+				break;
+				
+			case 5: // delete
+				cout << "\nSelect one of the following :  " << endl;
+				cout << "(2) Continue" << endl;
+				cout << "(9) Return to function menu" << endl;
+				cout << "(10) Return to main menu" << endl;
+				cout << "(0) Exit" << endl;
+				cout << "\nEnter your choice : ";
+				cin >> c2;
+				deleteData(dataList, c2);
+				system("cls");
+				break;
 
 		default:
 			cout << "Invalid Selection! Please try again." << endl;
@@ -313,6 +332,8 @@ void displayMenu()
 	cout << "(1) Daily Item Sales" << endl;
 	cout << "(2) Monthly Item Sales" << endl;
 	cout << "(3) Display All Data" << endl;
+	cout << "(4) Add Data to List" << endl;
+	cout << "(5) Delete Data" << endl;
 	cout << "(0) Exit \n" << endl;
 }
 
@@ -383,5 +404,36 @@ void addData(dataListType& dataList, int c2)
 		
 	default:
 		break;
+	}
+}
+
+void deleteData(dataListType& dataList, int c2)
+{
+	string date, item, quantity, unitprice, amount;
+
+	dataType newData;
+
+	cin.ignore();
+
+	if (c2 == 2)
+	{
+		cout << "\n\t\t Input data to be deleted." << endl;
+		cout << "Enter date: ";
+		getline(cin, date);
+		cout << endl;
+		cout << "Enter item: ";
+		getline(cin, item);
+		cout << endl;
+		cout << "Enter quantity: ";
+		getline(cin, quantity);
+		cout << endl;
+		cout << "Enter unitprice: ";
+		getline(cin, unitprice);
+		cout << endl;
+		cout << "Enter amount: ";
+		getline(cin, amount);
+		cout << endl;
+		newData.setDataInfo(date, item, quantity, unitprice, amount);
+		dataList.deleteNode(newData);
 	}
 }
