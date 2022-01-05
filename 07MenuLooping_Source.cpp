@@ -12,6 +12,7 @@ using namespace std;
 void createDataList(ifstream& din, dataListType& dataList);
 void displayMenu();
 void selectFunc();
+void addData(dataListType& dataList, int c2);
 
 int main()
 {
@@ -78,12 +79,14 @@ int main()
 					{
 						// add
 						cout << "\nSelect one of the following :  " << endl;
-						cout << "(1) Continue" << endl;
-						cout << "(9) Return to function menu" << endl;
+						cout << "(1) Add to bottom" << endl;
+						cout << "(2) Add to top" << endl;
 						cout << "(10) Return to main menu" << endl;
 						cout << "(0) Exit" << endl;
-						cout << "\nEnter your choice : " ;
+						cout << "\nEnter your choice : ";
 						cin >> c2;
+						addData(dataList, c2);
+						system("cls");
 					}
 					
 					while(c2 == 2) 
@@ -145,12 +148,14 @@ int main()
 					{
 						// add
 						cout << "\nSelect one of the following :  " << endl;
-						cout << "(1) Continue" << endl;
-						cout << "(9) Return to function menu" << endl;
+						cout << "(1) Add to bottom" << endl;
+						cout << "(2) Add to top" << endl;
 						cout << "(10) Return to main menu" << endl;
 						cout << "(0) Exit" << endl;
-						cout << "\nEnter your choice : " ;
+						cout << "\nEnter your choice : ";
 						cin >> c2;
+						addData(dataList, c2);
+						system("cls");
 					}
 					
 					while(c2 == 2) 
@@ -207,12 +212,14 @@ int main()
 					{
 						// add
 						cout << "\nSelect one of the following :  " << endl;
-						cout << "(1) Continue" << endl;
-						cout << "(9) Return to function menu" << endl;
+						cout << "(1) Add to bottom" << endl;
+						cout << "(2) Add to top" << endl;
 						cout << "(10) Return to main menu" << endl;
 						cout << "(0) Exit" << endl;
-						cout << "\nEnter your choice : " ;
+						cout << "\nEnter your choice : ";
 						cin >> c2;
+						addData(dataList, c2);
+						system("cls");
 					}
 					
 					while(c2 == 2) 
@@ -246,6 +253,18 @@ int main()
 					}
 				}
 				break;
+				
+			case 4:
+			// add
+			cout << "\nSelect one of the following :  " << endl;
+			cout << "(1) Add to bottom" << endl;
+			cout << "(2) Add to top" << endl;
+			cout << "(10) Return to main menu" << endl;
+			cout << "(0) Exit" << endl;
+			cout << "\nEnter your choice : ";
+			cin >> c2;
+			addData(dataList, c2);
+			system("cls");
 
 		default:
 			cout << "Invalid Selection! Please try again." << endl;
@@ -259,7 +278,6 @@ int main()
 		system("cls");
 	}
 	
-	din.close();	
 	return 0;
 }
 
@@ -309,4 +327,60 @@ void selectFunc()
 	cout << "(10) Return to main menu" << endl;
 	cout << "(0) Exit" << endl;
 	cout << "\nEnter your choice: ";
+}
+
+void addData(dataListType& dataList, int c2)
+{
+	string date, item, quantity, unitprice, amount;
+
+	dataType newData;
+
+	cin.ignore();
+
+	switch (c2)
+	{
+	case 1:
+		cout << "\n\t\t Input data into the list." << endl;
+		cout << "Enter date: " ;
+		getline(cin, date);
+		cout << endl;
+		cout << "Enter item: ";
+		getline(cin, item);
+		cout << endl;
+		cout << "Enter quantity: ";
+		getline(cin, quantity);
+		cout << endl;
+		cout << "Enter unitprice: ";
+		getline(cin, unitprice);
+		cout << endl;
+		cout << "Enter amount: ";
+		getline(cin, amount);
+		cout << endl;
+		newData.setDataInfo(date, item, quantity, unitprice, amount);
+		dataList.insertLast(newData);
+		break;
+	case 2:
+		cout << "\n\t\t Input data to be entered." << endl;
+		cout << "Enter date: ";
+		getline(cin, date);
+		cout << endl;
+		cout << "Enter item: ";
+		getline(cin, item);
+		cout << endl;
+		cout << "Enter quantity: ";
+		getline(cin, quantity);
+		cout << endl;
+		cout << "Enter unitprice: ";
+		getline(cin, unitprice);
+		cout << endl;
+		cout << "Enter amount: ";
+		getline(cin, amount);
+		cout << endl;
+		newData.setDataInfo(date, item, quantity, unitprice, amount);
+		dataList.insertFirst(newData);
+		break;
+		
+	default:
+		break;
+	}
 }
