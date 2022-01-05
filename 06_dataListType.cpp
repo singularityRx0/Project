@@ -24,7 +24,7 @@ void dataListType::dataCheckList(string data)
 			current = current->link;
 		}
 	}
-	cout << count << "Similar Data Found." << endl;
+	cout << count << "Similar Data Found.(By Date)" << endl;
 }
 
 void dataListType::dailyReport(string data)
