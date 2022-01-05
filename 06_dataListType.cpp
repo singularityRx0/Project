@@ -174,7 +174,10 @@ void dataListType::dailySalesInfo(string data)
 		}
 	}
 	
-	cout << "\t\tTotal Number of Item Sold : " << "Ayam: " << ayamT << ", Ikan: " << ikanT << ", Nasi: " << nasiT << endl;
+	cout << "\t\tTotal Number of Item Sold : " << endl;
+	cout << "Ayam: " << ayamT << endl;
+	cout << "Ikan: " << ikanT << endl;
+	cout << "Nasi: " << nasiT << endl;
 	cout << "==========================================================================================" << endl;
 }
 
@@ -223,9 +226,12 @@ void dataListType::monthlySalesInfo(string data)
 			current=current->link;
 		}
 	}
-	cout << "\t\tTotal Number of Item Sold : " << "Ayam: " << ayamT << ", Ikan: " << ikanT << ", Nasi: " << nasiT << endl;
+	
+	cout << "\t\tTotal Number of Item Sold : " << endl;
+	cout << "Ayam: " << ayamT << endl;
+	cout << "Ikan: " << ikanT << endl;
+	cout << "Nasi: " << nasiT << endl;
 	cout << "==========================================================================================" << endl;
-}
 
 void dataListType::totalAll()
 {
@@ -244,6 +250,7 @@ void dataListType::totalAll()
 		totalAmount = Amount + totalAmount;
 		current = current->link;
 	}
+	
 	cout << "\t\t\t\t\t\t\tAll in total amount made is RM " << totalAmount << endl;
 	cout << "==========================================================================================" << endl;
 }
@@ -288,6 +295,10 @@ void dataListType::infoAll()
 			current = current->link;
 		}
 	}
-	cout << "\t\tTotal Number of Item Sold : " << "Ayam: " << ayamT << ", Ikan: " << ikanT << ", Nasi: " << nasiT << endl;
+	
+	cout << "\t\tTotal Number of Item Sold : " << endl;
+	cout << "Ayam: " << ayamT << endl;
+	cout << "Ikan: " << ikanT << endl;
+	cout << "Nasi: " << nasiT << endl;
 	cout << "==========================================================================================" << endl;
 }
