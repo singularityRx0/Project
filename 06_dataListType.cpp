@@ -175,12 +175,12 @@ void dataListType::dailySalesInfo(string data)
 	}
 	
 	cout << endl;
-	cout << "\t\tTotal Number of Item Sold : " << endl;
-	cout << "\t\t__________________________" << endl;
+	cout << "\t\t\t\tTotal Number of Item Sold" << endl;
+	cout << "__________________________________________________________________________________________" << endl;
 	cout << endl;
-	cout << "\t\tAyam: \t" << ayamT << endl;
-	cout << "\t\tIkan: \t" << ikanT << endl;
-	cout << "\t\tNasi: \t" << nasiT << endl;
+	cout << "\t\t\t\t(1)\tAyam\t:\t" << ayamT << endl;
+	cout << "\t\t\t\t(2)\tIkan\t:\t" << ikanT << endl;
+	cout << "\t\t\t\t(3)\tNasi\t:\t" << nasiT << endl;
 	cout << "==========================================================================================" << endl;
 }
 
@@ -231,12 +231,12 @@ void dataListType::monthlySalesInfo(string data)
 	}
 	
 	cout << endl;
-	cout << "\t\tTotal Number of Item Sold : " << endl;
-	cout << "\t\t__________________________" << endl;
+	cout << "\t\t\t\tTotal Number of Item Sold" << endl;
+	cout << "__________________________________________________________________________________________" << endl;
 	cout << endl;
-	cout << "\t\tAyam: \t" << ayamT << endl;
-	cout << "\t\tIkan: \t" << ikanT << endl;
-	cout << "\t\tNasi: \t" << nasiT << endl;
+	cout << "\t\t\t\t(1)\tAyam\t:\t" << ayamT << endl;
+	cout << "\t\t\t\t(2)\tIkan\t:\t" << ikanT << endl;
+	cout << "\t\t\t\t(3)\tNasi\t:\t" << nasiT << endl;
 	cout << "==========================================================================================" << endl;
 }
 
@@ -305,11 +305,11 @@ void dataListType::infoAll()
 	}
 
 	cout << endl;
-	cout << "\t\tTotal Number of Item Sold : " << endl;
-	cout << "\t\t__________________________" << endl;
+	cout << "\t\t\t\tTotal Number of Item Sold" << endl;
+	cout << "__________________________________________________________________________________________" << endl;
 	cout << endl;
-	cout << "\t\tAyam: \t" << ayamT << endl;
-	cout << "\t\tIkan: \t" << ikanT << endl;
-	cout << "\t\tNasi: \t" << nasiT << endl;
+	cout << "\t\t\t\t(1)\tAyam\t:\t" << ayamT << endl;
+	cout << "\t\t\t\t(2)\tIkan\t:\t" << ikanT << endl;
+	cout << "\t\t\t\t(3)\tNasi\t:\t" << nasiT << endl;
 	cout << "==========================================================================================" << endl;
 }
