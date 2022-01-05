@@ -4,6 +4,29 @@
 
 using namespace std;
 
+void dataLsitType::dataCheckList(string data)
+{
+	nodeType<dataType>* current;
+	
+	int count = 0;
+	
+	curent = first;
+	
+	while(current != nullptr)
+	{
+		if (current->info.getDate() == data)
+		{
+			count++;
+			current = current->link;
+		}
+		else
+		{
+			current = current->link;
+		}
+	}
+	cout << count << " Data Found in List." << endl;
+}
+
 void dataListType::dataPrintDate() const
 {
 	nodeType<dataType>* current;
