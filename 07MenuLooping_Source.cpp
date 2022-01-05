@@ -393,19 +393,19 @@ void addData(dataListType& dataList, int c2)
 	{
 	case 1: //add to bottom
 		cout << "\n\t\t Input data into the list." << endl;
-		cout << "\nEnter date: " ;
+		cout << "\nEnter date (yyyy-mm-dd) : " ;
 		getline(cin, date);
 		cout << endl;
-		cout << "Enter item: ";
+		cout << "Enter item : ";
 		getline(cin, item);
 		cout << endl;
-		cout << "Enter quantity: ";
+		cout << "Enter quantity : ";
 		getline(cin, quantity);
 		cout << endl;
-		cout << "Enter unitprice: ";
+		cout << "Enter unitprice : ";
 		getline(cin, unitprice);
 		cout << endl;
-		cout << "Enter amount: ";
+		cout << "Enter amount : ";
 		getline(cin, amount);
 		cout << endl;
 		newData.setDataInfo(date, item, quantity, unitprice, amount);
@@ -416,19 +416,19 @@ void addData(dataListType& dataList, int c2)
 			
 	case 2: //add to top
 		cout << "\n\t\t Input data to be entered." << endl;
-		cout << "\nEnter date: ";
+		cout << "\nEnter date (yyyy-mm-dd) : ";
 		getline(cin, date);
 		cout << endl;
-		cout << "Enter item: ";
+		cout << "Enter item : ";
 		getline(cin, item);
 		cout << endl;
-		cout << "Enter quantity: ";
+		cout << "Enter quantity : ";
 		getline(cin, quantity);
 		cout << endl;
-		cout << "Enter unitprice: ";
+		cout << "Enter unitprice : ";
 		getline(cin, unitprice);
 		cout << endl;
-		cout << "Enter amount: ";
+		cout << "Enter amount : ";
 		getline(cin, amount);
 		cout << endl;
 		newData.setDataInfo(date, item, quantity, unitprice, amount);
@@ -454,19 +454,19 @@ void deleteData(dataListType& dataList, int c2)
 	if (c2 == 2)
 	{
 		cout << "\n\t\t Input data to be deleted." << endl;
-		cout << "Enter date: ";
+		cout << "Enter date (yyyy-mm-dd) : ";
 		getline(cin, date);
 		cout << endl;
-		cout << "Enter item: ";
+		cout << "Enter item : ";
 		getline(cin, item);
 		cout << endl;
-		cout << "Enter quantity: ";
+		cout << "Enter quantity : ";
 		getline(cin, quantity);
 		cout << endl;
-		cout << "Enter unitprice: ";
+		cout << "Enter unitprice : ";
 		getline(cin, unitprice);
 		cout << endl;
-		cout << "Enter amount: ";
+		cout << "Enter amount : ";
 		getline(cin, amount);
 		cout << endl;
 		newData.setDataInfo(date, item, quantity, unitprice, amount);
