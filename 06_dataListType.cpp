@@ -96,7 +96,7 @@ void dataListType::totalDailyAmount(string data)
 		}
 	}
 	
-	cout << "\t\t\t\t\t\tTotal amount made on " << data << " is RM " << totalamount << endl;
+	cout << "\t\t\t\t\tAll in total amount made is:\t" << "RM " << totalamount << endl;
 	cout << "==========================================================================================" << endl;
 }
 
@@ -128,7 +128,7 @@ void dataListType::totalMonthlyAmount(string data)
 			current = current->link;
 		}
 	}
-	cout << "\t\t\t\t\t\tTotal amount made on " << data << " is RM " << totalAmount << endl;
+	cout << "\t\t\t\t\tAll in total amount made is:\t" << "RM " << totalAmount << endl;
 	cout << "==========================================================================================" << endl;
 }
 
@@ -174,10 +174,13 @@ void dataListType::dailySalesInfo(string data)
 		}
 	}
 	
+	cout << endl;
 	cout << "\t\tTotal Number of Item Sold : " << endl;
-	cout << "Ayam: " << ayamT << endl;
-	cout << "Ikan: " << ikanT << endl;
-	cout << "Nasi: " << nasiT << endl;
+	cout << "\t\t__________________________" << endl;
+	cout << endl;
+	cout << "\t\tAyam: \t" << ayamT << endl;
+	cout << "\t\tIkan: \t" << ikanT << endl;
+	cout << "\t\tNasi: \t" << nasiT << endl;
 	cout << "==========================================================================================" << endl;
 }
 
@@ -227,31 +230,36 @@ void dataListType::monthlySalesInfo(string data)
 		}
 	}
 	
+	cout << endl;
 	cout << "\t\tTotal Number of Item Sold : " << endl;
-	cout << "Ayam: " << ayamT << endl;
-	cout << "Ikan: " << ikanT << endl;
-	cout << "Nasi: " << nasiT << endl;
+	cout << "\t\t__________________________" << endl;
+	cout << endl;
+	cout << "\t\tAyam: \t" << ayamT << endl;
+	cout << "\t\tIkan: \t" << ikanT << endl;
+	cout << "\t\tNasi: \t" << nasiT << endl;
 	cout << "==========================================================================================" << endl;
+}
 
 void dataListType::totalAll()
 {
 	nodeType<dataType>* current;
-	
+
 	string s3;
-	int Amount=0, totalAmount=0;
-	
+	int Amount = 0, totalAmount = 0;
+
 	current = first;
-	
+
 	while (current != nullptr)
 	{
+		
 		s3 = current->info.getAmount();
-			
+
 		Amount = stoi(s3); // string to int
 		totalAmount = Amount + totalAmount;
 		current = current->link;
 	}
-	
-	cout << "\t\t\t\t\t\t\tAll in total amount made is RM " << totalAmount << endl;
+
+	cout << "\t\t\t\t\tAll in total amount made is:\t" << "RM " <<  totalAmount << endl;
 	cout << "==========================================================================================" << endl;
 }
 
@@ -295,10 +303,13 @@ void dataListType::infoAll()
 			current = current->link;
 		}
 	}
-	
+
+	cout << endl;
 	cout << "\t\tTotal Number of Item Sold : " << endl;
-	cout << "Ayam: " << ayamT << endl;
-	cout << "Ikan: " << ikanT << endl;
-	cout << "Nasi: " << nasiT << endl;
+	cout << "\t\t__________________________" << endl;
+	cout << endl;
+	cout << "\t\tAyam: \t" << ayamT << endl;
+	cout << "\t\tIkan: \t" << ikanT << endl;
+	cout << "\t\tNasi: \t" << nasiT << endl;
 	cout << "==========================================================================================" << endl;
 }
