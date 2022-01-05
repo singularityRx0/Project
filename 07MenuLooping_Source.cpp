@@ -284,6 +284,15 @@ int main()
 				deleteData(dataList, c2);
 				system("cls");
 				break;
+				
+			case 6: // check
+				cin.ignore();
+				cout << "\nCheck for same data: " << endl;
+				cout << "Enter date: ";
+				getline(cin,data);
+				cout << "Searching for similar " << data << " in " << filename << endl;
+				dataList.dataCheckList(data);
+				break;
 
 		default:
 			cout << "Invalid Selection! Please try again." << endl;
@@ -334,6 +343,7 @@ void displayMenu()
 	cout << "(3) Display All Data" << endl;
 	cout << "(4) Add Data to List" << endl;
 	cout << "(5) Delete Data" << endl;
+	cout << "(6) Check Number of Same Data in List" << endl;
 	cout << "(0) Exit \n" << endl;
 }
 
