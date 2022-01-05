@@ -13,8 +13,6 @@ class dataType
 public:
 	void setDataInfo(string date, string item, string quantity, string unitprice, string amount);
 
-	void printDate() const;
-
 	void printInfo() const;
 
 	bool checkDate(string date);
