@@ -24,7 +24,8 @@ void dataListType::dataCheckList(string data)
 			current = current->link;
 		}
 	}
-	cout << count << "Similar Data Found.(By Date)" << endl;
+	cout << endl;
+	cout << count << " Similar Data Found.(By Date)" << endl;
 }
 
 void dataListType::dailyReport(string data)
@@ -96,7 +97,7 @@ void dataListType::totalDailyAmount(string data)
 		}
 	}
 	
-	cout << "\t\t\t\t\tAll in total amount made is:\t" << "RM " << totalamount << endl;
+	cout << "\t\t\t\t\t\tAll in total amount made is:\t" << "RM " << totalamount << endl;
 	cout << "==========================================================================================" << endl;
 }
 
@@ -128,7 +129,7 @@ void dataListType::totalMonthlyAmount(string data)
 			current = current->link;
 		}
 	}
-	cout << "\t\t\t\t\tAll in total amount made is:\t" << "RM " << totalAmount << endl;
+	cout << "\t\t\t\t\t\tAll in total amount made is:\t" << "RM " << totalAmount << endl;
 	cout << "==========================================================================================" << endl;
 }
 
@@ -259,7 +260,7 @@ void dataListType::totalAll()
 		current = current->link;
 	}
 
-	cout << "\t\t\t\t\tAll in total amount made is:\t" << "RM " <<  totalAmount << endl;
+	cout << "\t\t\t\t\t\tAll in total amount made is:\t" << "RM " <<  totalAmount << endl;
 	cout << "==========================================================================================" << endl;
 }
 
