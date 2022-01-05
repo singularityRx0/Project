@@ -11,6 +11,7 @@ using namespace std;
 
 void createDataList(ifstream& din, dataListType& dataList);
 void displayMenu();
+void addNew(dataListType& dataList, int choice);
 
 int main()
 {
@@ -49,26 +50,8 @@ int main()
 		switch (choice)
 		{
 		case 1:
-			cout << "Enter date (yyyy-mm-dd) : ";
 			cin.ignore();
-			getline(cin, date);
-			cout << endl;
-			cout << "Looking for: " << date << " in " << filename << endl;
-
-			if (dataList.dateSearch(date))
-			{
-				cout << "Data Exist: " << date << endl;
-				cin.ignore();
-				cin.get();
-				system("cls");
-			}
-			else
-			{
-				cout << "The Data Does Not Exist : " << date << endl;
-				cin.ignore();
-				cin.get();
-				system("cls");
-			}
+			addNew(dataList, choice);
 			break;
 			
 		case 2:
@@ -146,7 +129,7 @@ int main()
 					break;
 				}
 				break;
-
+				
 		default:
 			cout << "Invalid Selection! Please try again." << endl;
 
@@ -180,6 +163,55 @@ int main()
 		dataList.insertLast(newData);
 	}
 }*/
+void addNew(dataListType& dataList, int choice)
+{
+	string date,item,quantity,unitprice,amount;
+	
+	dataType newData;
+	
+	cout << "(1) Add to top" << endl;
+	cout << "(2) Add to bottom" << endl;
+	cin >> choice;
+	cin.ignore();
+	
+	switch(choice)
+	{
+	case 1:
+		cout << "Enter the date: ";
+        getline(cin,date);
+        //Get the item
+        cout << "Enter the item: ";
+        getline(cin,item);
+        //Get the quantity
+        cout << "Enter the quantity: ";
+        getline(cin,quantity);
+        //Get the unit price
+        cout << "Enter the unit price: ";
+        getline(cin,unitprice);;
+        cout << "Enter the amount: ";
+        getline(cin,amount);
+        newData.setDataInfo(date, item, quantity, unitprice, amount);
+        dataList.insertFirst(newData);
+        break;
+    case 2:
+    	cout << "Enter the date: ";
+        cin >> date;
+        //Get the item
+        cout << "Enter the item: ";
+        cin >> item;
+        //Get the quantity
+        cout << "Enter the quantity: ";
+        cin >> quantity;
+        //Get the unit price
+        cout << "Enter the unit price: ";
+        cin >> unitprice;
+        cout << "Enter the amount: ";
+        getline(cin,amount);
+        newData.setDataInfo(date, item, quantity, unitprice, amount);
+        dataList.insertLast(newData);
+        break;
+	}
+}
 
 void createDataList(ifstream& din, dataListType& dataList) //ignores commas
 {
@@ -213,7 +245,7 @@ void createDataList(ifstream& din, dataListType& dataList) //ignores commas
 void displayMenu()
 {
 	cout << "\nSelect one of the following :" << endl;
-	cout << "(1) To check a particular date." << endl;
+	cout << "(1) Add new data." << endl;
 	cout << "(2) Print all the data." << endl;
 	cout << "(3) Report Analysis." << endl;
 	cout << "(0) Exit \n" << endl;
