@@ -128,10 +128,12 @@ void unorderedLinkedList<Type>::deleteNode(const Type& deleteItem)
 				linkedListType<Type>::count--;
 				if (linkedListType<Type>::last == current) 
 					linkedListType<Type>::last = trailCurrent; 
-				delete current; 
+				delete current;
+				cout << "The data is done deleting in the list." << endl;
 			}
 			else
-				cout << "The item to be deleted is not in " << "the list." << endl;
+				cout << "The item to be deleted is not in the list. Press any ENTER to continue....." << endl;
+				cin.ignore();
 		}
 	}
 }
