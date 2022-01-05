@@ -13,20 +13,11 @@ void dataType::setDataInfo(string date, string item, string quantity, string uni
 	Amount = amount;
 }
 
-void dataType::printDate() const
-{
-	cout << "Data Dates: " << Date << endl;
-}
-
 void dataType::printInfo() const
 {
 	cout << Date << "\t |" << Item << "\t\t |" << Quantity << "\t\t |" << Unitprice << "\t\t |" << Amount << "\t\t |" << endl;
 }
 
-bool dataType::checkDate(string date)
-{
-	return(Date == date);
-}
 
 string dataType::getDate() const
 {
