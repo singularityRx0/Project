@@ -27,18 +27,6 @@ void dataLsitType::dataCheckList(string data)
 	cout << count << "Similar Data Found." << endl;
 }
 
-void dataListType::dataPrintDate() const
-{
-	nodeType<dataType>* current;
-
-	current = first;
-	while (current != nullptr)
-	{
-		current->info.printDate();
-		current = current->link;
-	}
-}
-
 void dataListType::dailyReport(string data)
 {
 	nodeType<dataType>* current;
