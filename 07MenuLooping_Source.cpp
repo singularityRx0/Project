@@ -339,7 +339,7 @@ void addData(dataListType& dataList, int c2)
 
 	switch (c2)
 	{
-	case 1:
+	case 1: //add to bottom
 		cout << "\n\t\t Input data into the list." << endl;
 		cout << "Enter date: " ;
 		getline(cin, date);
@@ -359,7 +359,8 @@ void addData(dataListType& dataList, int c2)
 		newData.setDataInfo(date, item, quantity, unitprice, amount);
 		dataList.insertLast(newData);
 		break;
-	case 2:
+			
+	case 2: //add to top
 		cout << "\n\t\t Input data to be entered." << endl;
 		cout << "Enter date: ";
 		getline(cin, date);
