@@ -44,9 +44,7 @@ private:
 	string Unitprice;
 
 	string Amount;
-
-
-
+	
 };
 
 
