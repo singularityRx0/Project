@@ -15,8 +15,6 @@ public:
 
 	void printInfo() const;
 
-	bool checkDate(string date);
-
 	string getDate() const;
 	
 	string getAmount() const;
