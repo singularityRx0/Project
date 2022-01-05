@@ -293,14 +293,14 @@ void dataListType::infoAll()
 			ayamT = ayam + ayamT;
 			current = current->link;
 		}
-		if (current->info.getItem() == "Ikan")
+		else if (current->info.getItem() == "Ikan")
 		{
 			s2 = current->info.getQuantity();
 			ikan = stoi(s2);
 			ikanT = ikan + ikanT;
 			current = current->link;
 		}
-		if (current->info.getItem() == "Nasi")
+		else if (current->info.getItem() == "Nasi")
 		{
 			s3 = current->info.getQuantity();
 			nasi = stoi(s3);
