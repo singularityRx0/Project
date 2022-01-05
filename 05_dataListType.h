@@ -10,9 +10,7 @@ using namespace std;
 class dataListType :public unorderedLinkedList<dataType>
 {
 public:
-	bool dateSearch(string date) const;
-
-	bool dataCheckDate(string date) const;
+	void dataCheckList(string data);
 
 	void dataPrintDate() const;
 	
@@ -31,9 +29,6 @@ public:
 	void totalAll();
 	
 	void infoAll();
-
-private:
-	void searchDataList(string date, bool& found, nodeType<dataType>* &current) const;
 
 };
 
