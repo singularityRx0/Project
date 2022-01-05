@@ -70,6 +70,8 @@ int main()
 				cout << "==========================================================================================" << endl;
 				dataList.dailySalesInfo(data);
 				dataList.totalDailyAmount(data);
+				cout << "press any ENTER to continue....." << endl;
+				cin.get();
 				
 				selectFunc();
 				cin >> c2;
@@ -141,6 +143,8 @@ int main()
 				cout << "==========================================================================================" << endl;
 				dataList.monthlySalesInfo(data);
 				dataList.totalMonthlyAmount(data);
+				cout << "press any ENTER to continue....." << endl;
+				cin.get();
 				
 				selectFunc();
 				cin >> c2;
@@ -207,6 +211,8 @@ int main()
 				cout << "==========================================================================================" << endl;
 				dataList.infoAll();
 				dataList.totalAll();
+				cin.ignore();
+				cin.get();
 				
 				selectFunc();
 				cin >> c2;
