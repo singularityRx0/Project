@@ -251,7 +251,7 @@ void linkedListType<Type>::copyList(const linkedListType<Type>& otherList)
 	nodeType<Type> *newNode; //pointer to create a node
 	nodeType<Type> *current; //pointer to traverse the list
 
-	if (first != nullptr) /
+	if (first != nullptr) 
 		destroyList();
 
 	if (otherList.first == nullptr) 
