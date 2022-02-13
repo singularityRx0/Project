@@ -13,6 +13,11 @@ void dataType::setDataInfo(string date, string item, string quantity, string uni
 	Amount = amount;
 }
 
+dataType::dataType(string date, string item, string quantity, string unitprice, string amount)
+{
+	setDataInfo(date, item, quantity, unitprice, amount);
+}
+
 void dataType::printInfo() const
 {
 	cout << Date << "\t |" << Item << "\t\t |" << Quantity << "\t\t |" << Unitprice << "\t\t |" << Amount << "\t\t |" << endl;
@@ -42,11 +47,6 @@ string dataType::getQuantity() const
 string dataType::getUnitprice() const
 {
 	return Unitprice;
-}
-
-dataType::dataType(string date, string item, string quantity, string unitprice, string amount)
-{
-	setDataInfo(date, item, quantity, unitprice, amount);
 }
 
 bool dataType::operator==(const dataType& other) const
